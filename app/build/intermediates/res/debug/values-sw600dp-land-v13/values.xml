@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values-sw600dp-land/dimens.xml -->
+    <eat-comment/>
+    <dimen name="alarm_side_padding">128dip</dimen>
+    <dimen name="ampm_text_size">90dip</dimen>
+    <dimen name="analog_clock_margin">48dp</dimen>
+    <dimen name="circle_margin">48dp</dimen>
+    <dimen name="circle_margin_top">16dp</dimen>
+    <dimen name="circle_size">360dip</dimen>
+    <dimen name="clock_side_padding">48dip</dimen>
+    <dimen name="date_text_size">15sp</dimen>
+    <dimen name="dialpad_digit_padding">26dip</dimen>
+    <dimen name="dialpad_font_size">42sp</dimen>
+    <dimen name="next_alarm_text_size">15sp</dimen>
+    <dimen name="stopwatch_list_margin_start">128dip</dimen>
+    <dimen name="sw_padding_end">48dp</dimen>
+    <dimen name="time_margin_top">32dip</dimen>
+    <dimen name="time_text_size">275dip</dimen>
+    <dimen name="timer_circle_margin">48dp</dimen>
+    <dimen name="timer_setup_button_size">36sp</dimen>
+    <dimen name="timer_setup_delete_start_margin">38sp</dimen>
+    <dimen name="timer_setup_font_size">78sp</dimen>
+    <dimen name="timer_setup_label_size">24sp</dimen>
+    <dimen name="world_clock_margin">48dp</dimen>
+    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values-sw600dp-land/config.xml -->
+    <eat-comment/>
+    <item name="timer_column_count" type="integer">2</item>
+</resources>

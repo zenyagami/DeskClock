@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.android.support/support-v13/21.0.2/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="61965ae058916e6a57950dd61b0164dc866af19a">
+        <dex dex="/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/pre-dexed/debug/classes-e946461c6932c1cfd95a7c4dc57c31424ed026e9.jar" />
+    </item>
+    <item
+        jar="/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.android.support/palette-v7/21.0.2/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="44eafdf5e2d61a2e38a0e9dceaf2e901abc5f6b2">
+        <dex dex="/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/pre-dexed/debug/classes-5a8f352dca7b967edc019d8a9e56b823bc9feb72.jar" />
+    </item>
+    <item
+        jar="/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.android.support/support-v13/21.0.2/libs/internal_impl-21.0.2.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="9346da9fb778af9e451211bbc3541daced174ba7">
+        <dex dex="/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.2-7a423944af10b1f57183ea16a27ed3d5bd14024f.jar" />
+    </item>
+    <item
+        jar="/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="0f6d5c1ef2e982c3b7858408e3df389cf5d202da">
+        <dex dex="/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/pre-dexed/debug/classes-2f0b91477425515df30bf73166bb0df22503b330.jar" />
+    </item>
+    <item
+        jar="/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.2/libs/internal_impl-21.0.2.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="962e8b12569c56dbdcf8367eb4eac8bb129cd18f">
+        <dex dex="/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.2-811c8f62ab5496a71592b6d5a804e64062b21ddd.jar" />
+    </item>
+    <item
+        jar="/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.2/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="d1bf02de1c56d942e7a9d093b8610ba1ef4128e3">
+        <dex dex="/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/pre-dexed/debug/classes-6f2907804ada796b9438bc2e63e46e53ecef3489.jar" />
+    </item>
+    <item
+        jar="/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="7ae2d38807a43b2f2185ff4089a92c790b579e54">
+        <dex dex="/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/pre-dexed/debug/classes-c20f9715d907990b0cb8ce83fbdabf372cdaa9f1.jar" />
+    </item>
+    <item
+        jar="/Users/zebstudios/Downloads/adt-bundle-mac-x86_64-20130522/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.2/support-annotations-21.0.2.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="99373741f99a0556ee293c41e8faa1ca3ae8a4e6">
+        <dex dex="/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.2-19e4501b9b24705e48642d12f2f6adfb6cffe5cb.jar" />
+    </item>
+
+</items>

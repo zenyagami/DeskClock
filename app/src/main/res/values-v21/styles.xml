@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BorderlessButton">
+        <item name="android:background">?android:selectableItemBackgroundBorderless</item>
+    </style>
+    <style name="AlarmSwitchTheme">
+        <item name="android:colorControlActivated">@color/hot_pink</item>
+    </style>
+    <style name="TimePickerStyle" parent="@android:style/Widget.Material.TimePicker">
+        <item name="android:headerBackground">@color/time_picker_gray</item>
+        <item name="android:headerTimeTextAppearance">@style/TimeLabelTextAppearance</item>
+        <item name="android:headerAmPmTextAppearance">@style/AmPmTextAppearance</item>
+        <item name="android:numbersBackgroundColor">@color/time_picker_gray</item>
+        <item name="android:numbersTextColor">@color/white</item>
+        <item name="android:amPmTextColor">@color/white</item>
+    </style>
+    <style name="CitiesTheme" parent="@style/DeskClockParentTheme">
+        <item name="android:fastScrollThumbDrawable">@drawable/red_fastscroll_thumb</item>
+        <item name="android:fastScrollStyle">@style/FastScrollStyle</item>
+        <item name="android:actionBarStyle">@style/CitiesTheme.ActionBar</item>
+    </style>
+    <style name="FastScrollStyle" parent="@android:style/Widget.Material.FastScroll">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:padding">24dip</item>
+    </style>
+    <style name="DeskClockParentTheme" parent="Theme.AppCompat">
+        <item name="android:statusBarColor">@color/status_bar</item>
+        <item name="android:colorControlActivated">@color/white</item>
+        <item name="android:colorControlNormal">@color/white</item>
+        <item name="android:popupMenuStyle">?android:attr/actionOverflowMenuStyle</item>
+        <item name="android:buttonStyle">?android:attr/borderlessButtonStyle</item>
+    </style>
+</resources>

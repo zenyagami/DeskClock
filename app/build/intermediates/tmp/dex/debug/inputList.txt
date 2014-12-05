@@ -1,0 +1,9 @@
+/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/classes/debug
+/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.2-7a423944af10b1f57183ea16a27ed3d5bd14024f.jar
+/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.2-19e4501b9b24705e48642d12f2f6adfb6cffe5cb.jar
+/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/pre-dexed/debug/classes-e946461c6932c1cfd95a7c4dc57c31424ed026e9.jar
+/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/pre-dexed/debug/classes-5a8f352dca7b967edc019d8a9e56b823bc9feb72.jar
+/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.2-811c8f62ab5496a71592b6d5a804e64062b21ddd.jar
+/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/pre-dexed/debug/classes-c20f9715d907990b0cb8ce83fbdabf372cdaa9f1.jar
+/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/pre-dexed/debug/classes-6f2907804ada796b9438bc2e63e46e53ecef3489.jar
+/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/pre-dexed/debug/classes-2f0b91477425515df30bf73166bb0df22503b330.jar
