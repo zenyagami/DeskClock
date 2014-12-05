@@ -16,4 +16,4 @@
 <View xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:background="@color/transparent"
-    android:layout_height="@dimen/button_footer_height" /><!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/layout/blank_footer_view.xml -->
+    android:layout_height="@dimen/button_footer_height" /><!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/layout/blank_footer_view.xml -->

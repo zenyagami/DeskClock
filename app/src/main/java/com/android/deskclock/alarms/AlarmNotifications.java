@@ -15,6 +15,7 @@
  */
 package com.android.deskclock.alarms;
 
+import android.annotation.TargetApi;
 import android.app.AlarmManager;
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -22,17 +23,21 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.os.Build;
+import android.support.v4.app.NotificationCompat;
 
 import com.android.deskclock.AlarmClockFragment;
 import com.android.deskclock.AlarmUtils;
 import com.android.deskclock.DeskClock;
 import com.android.deskclock.LogUtils;
 import com.android.deskclock.R;
+import com.android.deskclock.Utils;
 import com.android.deskclock.provider.Alarm;
 import com.android.deskclock.provider.AlarmInstance;
 
 public final class AlarmNotifications {
 
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public static void registerNextAlarmWithAlarmManager(Context context, AlarmInstance instance)  {
         // Sets a surrogate alarm with alarm manager that provides the AlarmClockInfo for the
         // alarm that is going to fire next. The operation is constructed such that it is ignored
@@ -51,9 +56,17 @@ public final class AlarmNotifications {
             PendingIntent viewIntent = PendingIntent.getActivity(context, instance.hashCode(),
                     createViewAlarmIntent(context, instance), PendingIntent.FLAG_UPDATE_CURRENT);
 
-            AlarmManager.AlarmClockInfo info =
-                    new AlarmManager.AlarmClockInfo(alarmTime, viewIntent);
-            alarmManager.setAlarmClock(info, operation);
+            if(Utils.isLP())
+            {
+                AlarmManager.AlarmClockInfo info =
+                        new AlarmManager.AlarmClockInfo(alarmTime, viewIntent);
+                alarmManager.setAlarmClock(info, operation);
+            }else
+            {
+                alarmManager.set(AlarmManager.RTC_WAKEUP,alarmTime,viewIntent);
+
+            }
+
         } else if (operation != null) {
             alarmManager.cancel(operation);
         }
@@ -65,7 +78,7 @@ public final class AlarmNotifications {
                 context.getSystemService(Context.NOTIFICATION_SERVICE);
 
         Resources resources = context.getResources();
-        Notification.Builder notification = new Notification.Builder(context)
+        NotificationCompat.Builder notification = new NotificationCompat.Builder(context)
                 .setContentTitle(resources.getString(R.string.alarm_alert_predismiss_title))
                 .setContentText(AlarmUtils.getAlarmText(context, instance))
                 .setSmallIcon(R.drawable.stat_notify_alarm)
@@ -103,7 +116,7 @@ public final class AlarmNotifications {
                 context.getSystemService(Context.NOTIFICATION_SERVICE);
 
         Resources resources = context.getResources();
-        Notification.Builder notification = new Notification.Builder(context)
+        NotificationCompat.Builder notification = new NotificationCompat.Builder(context)
                 .setContentTitle(resources.getString(R.string.alarm_alert_predismiss_title))
                 .setContentText(AlarmUtils.getAlarmText(context, instance))
                 .setSmallIcon(R.drawable.stat_notify_alarm)
@@ -135,7 +148,7 @@ public final class AlarmNotifications {
                 context.getSystemService(Context.NOTIFICATION_SERVICE);
 
         Resources resources = context.getResources();
-        Notification.Builder notification = new Notification.Builder(context)
+        NotificationCompat.Builder notification = new NotificationCompat.Builder(context)
                 .setContentTitle(instance.getLabelOrDefault(context))
                 .setContentText(resources.getString(R.string.alarm_alert_snooze_until,
                         AlarmUtils.getFormattedTime(context, instance.getAlarmTime())))
@@ -170,7 +183,7 @@ public final class AlarmNotifications {
         String alarmTime = AlarmUtils.getFormattedTime(context, instance.getAlarmTime());
         String contextText = instance.mLabel.isEmpty() ? alarmTime :
                 context.getString(R.string.alarm_missed_text, alarmTime, label);
-        Notification.Builder notification = new Notification.Builder(context)
+        NotificationCompat.Builder notification = new NotificationCompat.Builder(context)
                 .setContentTitle(context.getString(R.string.alarm_missed_title))
                 .setContentText(contextText)
                 .setSmallIcon(R.drawable.stat_notify_alarm)
@@ -203,7 +216,7 @@ public final class AlarmNotifications {
         context.sendBroadcast(new Intent(Intent.ACTION_CLOSE_SYSTEM_DIALOGS));
 
         Resources resources = context.getResources();
-        Notification.Builder notification = new Notification.Builder(context)
+        NotificationCompat.Builder notification = new NotificationCompat.Builder(context)
                 .setContentTitle(instance.getLabelOrDefault(context))
                 .setContentText(AlarmUtils.getFormattedTime(context, instance.getAlarmTime()))
                 .setSmallIcon(R.drawable.stat_notify_alarm)

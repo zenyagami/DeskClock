@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values-ne-rNP/strings.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values-ne-rNP/strings.xml -->
     <eat-comment/>
     <string-array name="alarm_set">
     <item msgid="6450913786084215050">"अहिलेबाट एक मिनेटभन्दा कम समयका लागि अलार्म सेट गरिएको छ।"</item>
@@ -21,7 +21,7 @@
     <item msgid="7219791437023378544">"३० मिनेट"</item>
     <item msgid="4278641338024561333">"कहिल्यै पनि होइन"</item>
   </string-array>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values-ne-rNP/array.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values-ne-rNP/array.xml -->
     <eat-comment/>
     <string-array name="cities_names">
     <item msgid="2528360178629244616">"अविड्जन"</item>
@@ -324,7 +324,7 @@
     <item msgid="7087691675228926801">"पारामारिबो"</item>
     <item msgid="478384295484578701">"क्यिटो"</item>
   </string-array>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values-ne-rNP/strings.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values-ne-rNP/strings.xml -->
     <eat-comment/>
     <string-array name="clock_style_entries">
     <item msgid="917900462224167608">"एनालग"</item>
@@ -476,7 +476,7 @@
     <item msgid="6764708652976799977" quantity="one">"१ मिनेट"</item>
     <item msgid="3799129667336330616" quantity="other">"<ns1:g id="NUMBER">%d</ns1:g> घडीहरू"</item>
   </plurals>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values-ne-rNP/values.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values-ne-rNP/values.xml -->
     <eat-comment/>
     <string msgid="4600421777120114993" name="abc_action_bar_home_description">"गृह खोज्नुहोस्"</string>
     <string msgid="1397052879051804371" name="abc_action_bar_home_description_format">"%1$s, %2$s"</string>
@@ -493,7 +493,7 @@
     <string msgid="893419373245838918" name="abc_searchview_description_voice">"भ्वाइस खोजी"</string>
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"साझेदारी गर्नुहोस्..."</string>
     <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"%s सँग साझेदारी गर्नुहोस्"</string>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values-ne-rNP/strings.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values-ne-rNP/strings.xml -->
     <eat-comment/>
     <string msgid="5976616107390962899" name="add_alarm">"अलार्म थप्नुहोस्"</string>
     <string msgid="3272183025444682500" name="alarm_alert_dismiss_now_text">"अब खारेज गर्नुहोस्"</string>
@@ -541,7 +541,7 @@
     <string msgid="8317286807280600391" name="clock_settings">"घडी"</string>
     <string msgid="2265011060429742344" name="clock_style">"शैली"</string>
     <string msgid="3561772046433483980" name="collapse_alarm">"अलार्म ढाल्नुहोस्"</string>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-ne-rNP/common_strings.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-ne-rNP/common_strings.xml -->
     <eat-comment/>
     <string msgid="473679118463211576" name="common_android_wear_notification_needs_update_text">"Android उपयोग अनुप्रयोग लाई अद्यावधिक गर्न एक अनुप्रयोगको आवश्यक छ।"</string>
     <string msgid="3046420540094071256" name="common_android_wear_update_text">"Android उपयोग अनुप्रयोग अद्यावधिक नगरेसम्म यो अनुप्रयोगले कार्य गर्ने छैन।"</string>
@@ -571,7 +571,7 @@
     <string msgid="411506735369601515" name="common_open_on_phone">"फोनमा खोल्नुहोस्"</string>
     <string msgid="9071884888741449141" name="common_signin_button_text">"साइन इन गर्नुहोस्"</string>
     <string msgid="2429381841831957106" name="common_signin_button_text_long">"गुगलका साथ साइन इन गर्नुहोस्"</string>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values-ne-rNP/strings.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values-ne-rNP/strings.xml -->
     <eat-comment/>
     <string msgid="2194676418924016327" name="control_set_alarm">"अलार्म सेट गर्नुहोस्"</string>
     <string msgid="7984755014526510295" name="day">"१ दिन"</string>

@@ -68,6 +68,8 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.LinkedList;
 
+import at.markushi.ui.RevealColorView;
+
 // TODO: This class is renamed from TimerFragment to TimerFullScreenFragment with no change. It
 // is responsible for the timer list in full screen timer alert and should be deprecated shortly.
 public class TimerFullScreenFragment extends DeskClockFragment
@@ -75,8 +77,6 @@ public class TimerFullScreenFragment extends DeskClockFragment
 
     private static final String TAG = "TimerFragment1";
     private static final String KEY_ENTRY_STATE = "entry_state";
-    private static final Interpolator REVEAL_INTERPOLATOR =
-            new PathInterpolator(0.0f, 0.0f, 0.2f, 1.0f);
     public static final String GOTO_SETUP_VIEW = "deskclock.timers.gotosetup";
 
     private Bundle mViewState;
@@ -550,7 +550,14 @@ public class TimerFullScreenFragment extends DeskClockFragment
         final ViewGroupOverlay overlay = (ViewGroupOverlay) decorView.getOverlay();
 
         // Create a transient view for performing the reveal animation.
-        final View revealView = new View(activity);
+        final View revealView;
+        if(Utils.isLP())
+        {
+            revealView= new View(activity);
+        }else
+        {
+            revealView= new RevealColorView(activity);
+        }
         revealView.setRight(decorView.getWidth());
         revealView.setBottom(decorView.getHeight());
         revealView.setBackgroundColor(color);
@@ -567,9 +574,16 @@ public class TimerFullScreenFragment extends DeskClockFragment
         final int yMax = Math.max(revealCenterY, decorView.getHeight() - revealCenterY);
         final float revealRadius = (float) Math.sqrt(Math.pow(xMax, 2.0) + Math.pow(yMax, 2.0));
 
-        final Animator revealAnimator = ViewAnimationUtils.createCircularReveal(
-                revealView, revealCenterX, revealCenterY, 0.0f, revealRadius);
-        revealAnimator.setInterpolator(REVEAL_INTERPOLATOR);
+        Animator revealAnimator = null;
+        if(Utils.isLP())
+        {
+            revealAnimator = ViewAnimationUtils.createCircularReveal(
+                    revealView, revealCenterX, revealCenterY, 0.0f, revealRadius);
+            revealAnimator.setInterpolator(new PathInterpolator(0.0f, 0.0f, 0.2f, 1.0f));
+        }else
+        {
+            ((RevealColorView)revealView).reveal(revealCenterX,revealCenterY, color, (int)revealRadius, TimerFragment.ANIMATION_TIME_MILLIS, null);
+        }
 
         final ValueAnimator fadeAnimator = ObjectAnimator.ofFloat(revealView, View.ALPHA, 1.0f);
         fadeAnimator.addListener(new AnimatorListenerAdapter() {
@@ -579,10 +593,14 @@ public class TimerFullScreenFragment extends DeskClockFragment
             }
         });
 
-        final AnimatorSet alertAnimator = new AnimatorSet();
-        alertAnimator.setDuration(TimerFragment.ANIMATION_TIME_MILLIS);
-        alertAnimator.play(revealAnimator).before(fadeAnimator);
-        alertAnimator.start();
+        if(revealAnimator!=null)
+        {
+            final AnimatorSet alertAnimator = new AnimatorSet();
+            alertAnimator.setDuration(TimerFragment.ANIMATION_TIME_MILLIS);
+            alertAnimator.play(revealAnimator).before(fadeAnimator);
+            alertAnimator.start();
+        }
+
     }
 
     @Override

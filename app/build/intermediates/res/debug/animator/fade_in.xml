@@ -20,4 +20,4 @@
     android:propertyName="alpha"
     android:interpolator="@android:interpolator/decelerate_quad"
     android:duration="@integer/fade_duration" />
-<!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/animator/fade_in.xml -->
+<!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/animator/fade_in.xml -->

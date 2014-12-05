@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values-sw600dp-land/dimens.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values-sw600dp-land/dimens.xml -->
     <eat-comment/>
     <dimen name="alarm_side_padding">128dip</dimen>
     <dimen name="ampm_text_size">90dip</dimen>
@@ -23,7 +23,7 @@
     <dimen name="timer_setup_font_size">78sp</dimen>
     <dimen name="timer_setup_label_size">24sp</dimen>
     <dimen name="world_clock_margin">48dp</dimen>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values-sw600dp-land/config.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values-sw600dp-land/config.xml -->
     <eat-comment/>
     <item name="timer_column_count" type="integer">2</item>
 </resources>

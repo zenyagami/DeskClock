@@ -18,4 +18,4 @@
     <item android:state_enabled="true" android:drawable="@drawable/ic_backspace_normal" />
     <item android:state_enabled="false" android:drawable="@drawable/ic_backspace_disabled" />
 </selector>
-<!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/drawable/ic_backspace.xml -->
+<!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/drawable/ic_backspace.xml -->

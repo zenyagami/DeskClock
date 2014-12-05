@@ -26,6 +26,7 @@ import android.media.RingtoneManager;
 import android.net.Uri;
 import android.preference.PreferenceManager;
 
+import com.android.deskclock.FragmentSettings;
 import com.android.deskclock.LogUtils;
 import com.android.deskclock.R;
 import com.android.deskclock.SettingsActivity;
@@ -361,7 +362,7 @@ public final class AlarmInstance implements ClockContract.InstancesColumns {
      */
     public Calendar getTimeout(Context context) {
         String timeoutSetting = PreferenceManager.getDefaultSharedPreferences(context)
-                .getString(SettingsActivity.KEY_AUTO_SILENCE, DEFAULT_ALARM_TIMEOUT_SETTING);
+                .getString(FragmentSettings.KEY_AUTO_SILENCE, DEFAULT_ALARM_TIMEOUT_SETTING);
         int timeoutMinutes = Integer.parseInt(timeoutSetting);
 
         // Alarm silence has been set to "None"

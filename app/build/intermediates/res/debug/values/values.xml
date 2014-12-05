@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string-array name="alarm_set">
         <item>Alarm set for less than 1 minute from now.</item>
@@ -30,7 +30,7 @@
       <item>30</item>
       <item>-1</item> <!-- Off -->
       </string-array>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values/array.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values/array.xml -->
     <eat-comment/>
     <string-array name="cities_id" translatable="false">
         <item>C1</item>
@@ -934,7 +934,7 @@
         <item>America/Paramaribo</item>
         <item>America/Panama</item>
     </string-array>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string-array name="clock_style_entries">
       <item>Analog</item>
@@ -1184,7 +1184,7 @@
       <item>2</item>
       <item>0</item>
     </string-array>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
     <eat-comment/>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
@@ -1196,12 +1196,12 @@
     <bool name="abc_config_actionMenuItemAllCaps">true</bool>
     <bool name="abc_config_allowActionMenuItemTextWithIcon">false</bool>
     <bool name="abc_config_showMenuShortcutsWhenKeyboardPresent">false</bool>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values/config.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values/config.xml -->
     <eat-comment/>
     <bool name="config_dockAppEnabled">true</bool>
     <bool name="config_requiresScreenSaver">true</bool>
     <bool name="config_rotateAlarmAlert">false</bool>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
     <eat-comment/>
     <color name="abc_input_method_navigation_guard">@android:color/black</color>
     <color name="abc_search_url_text_normal">#7fa87f</color>
@@ -1209,45 +1209,45 @@
     <color name="abc_search_url_text_selected">@android:color/black</color>
     <color name="accent_material_dark">@color/material_deep_teal_200</color>
     <color name="accent_material_light">@color/material_deep_teal_500</color>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="action_bar_button_text_color">#FFFFFF</color>
     <color name="ampm_off">#ff404040</color>
     <color name="ampm_on">#ffffffff</color>
     <color name="ampm_text_color">#99FFFFFF</color>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
     <eat-comment/>
     <color name="background_floating_material_dark">#ff424242</color>
     <color name="background_floating_material_light">#ffeeeeee</color>
     <color name="background_material_dark">#ff303030</color>
     <color name="background_material_light">#ffeeeeee</color>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="black">#ff000000</color>
     <color name="black_16p">#28000000</color>
     <color name="black_54p">#8a000000</color>
     <color name="black_87p">#de000000</color>
     <color name="blackish_selected">#0cffffff</color>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
     <eat-comment/>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
     <color name="bright_foreground_disabled_material_light">#80000000</color>
     <color name="bright_foreground_inverse_material_dark">@color/bright_foreground_material_light</color>
     <color name="bright_foreground_inverse_material_light">@color/bright_foreground_material_dark</color>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="bright_foreground_light_disabled">#80000000</color>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
     <eat-comment/>
     <color name="bright_foreground_material_dark">@android:color/white</color>
     <color name="bright_foreground_material_light">@android:color/black</color>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="clock_gray">#B3ffffff</color>
     <color name="clock_white">#ffffff</color>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values/common_colors.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values/common_colors.xml -->
     <eat-comment/>
     <color name="common_action_bar_splitter">#d2d2d2</color>
     <color name="common_signin_btn_dark_text_default">@android:color/white</color>
@@ -1259,29 +1259,29 @@
     <color name="common_signin_btn_light_text_disabled">#FFAAAAAA</color>
     <color name="common_signin_btn_light_text_focused">#FF737373</color>
     <color name="common_signin_btn_light_text_pressed">@android:color/white</color>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="default_background">#5c6bc0</color>
     <color name="dialog_gray">#28ffffff</color>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
     <eat-comment/>
     <color name="dim_foreground_disabled_material_dark">#80bebebe</color>
     <color name="dim_foreground_disabled_material_light">#80323232</color>
     <color name="dim_foreground_material_dark">#ffbebebe</color>
     <color name="dim_foreground_material_light">#ff323232</color>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="hairline">#28ffffff</color>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
     <eat-comment/>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
     <color name="highlighted_text_material_light">#66009688</color>
     <color name="hint_foreground_material_dark">@color/bright_foreground_disabled_material_dark</color>
     <color name="hint_foreground_material_light">@color/bright_foreground_disabled_material_light</color>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="hot_pink">#FF4081</color>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
     <eat-comment/>
     <color name="link_text_material_dark">@color/material_deep_teal_200</color>
     <color name="link_text_material_light">@color/material_deep_teal_500</color>
@@ -1290,10 +1290,10 @@
     <color name="material_blue_grey_950">#ff21272b</color>
     <color name="material_deep_teal_200">#ff80cbc4</color>
     <color name="material_deep_teal_500">#ff009688</color>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="pressed_state_color">#33999999</color>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
     <eat-comment/>
     <color name="primary_dark_material_dark">#ff000000</color>
     <color name="primary_dark_material_light">#ff757575</color>
@@ -1305,29 +1305,29 @@
     <color name="primary_text_disabled_material_light">#39000000</color>
     <color name="ripple_material_dark">#40ffffff</color>
     <color name="ripple_material_light">#40000000</color>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="screen_saver_color">#FF006688</color>
     <color name="screen_saver_dim_color">#FF001634</color>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
     <eat-comment/>
     <color name="secondary_text_default_material_dark">#b3ffffff</color>
     <color name="secondary_text_default_material_light">#8a000000</color>
     <color name="secondary_text_disabled_material_dark">#36ffffff</color>
     <color name="secondary_text_disabled_material_light">#24000000</color>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="status_bar">#26000000</color>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
     <eat-comment/>
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="time_picker_gray">#212121</color>
     <color name="time_text_color">#E6FFFFFF</color>
     <color name="transparent">#00000000</color>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values/wallet_colors.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values/wallet_colors.xml -->
     <eat-comment/>
     <color name="wallet_bright_foreground_disabled_holo_light">#ffb2b2b2</color>
     <color name="wallet_bright_foreground_holo_dark">#fff3f3f3</color>
@@ -1342,7 +1342,7 @@
     <color name="wallet_hint_foreground_holo_light">#808080</color>
     <color name="wallet_holo_blue_light">#ff33b5e5</color>
     <color name="wallet_link_text_light">#0000ee</color>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="white">#ffffffff</color>
     <color name="white_69p">#B1FFFFFF</color>
@@ -1351,6 +1351,7 @@
     <declare-styleable name="ActionMenuItemView"><attr name="android:minWidth"/></declare-styleable>
     <declare-styleable name="ActionMenuView"/>
     <declare-styleable name="ActionMode"><attr name="titleTextStyle"/><attr name="subtitleTextStyle"/><attr name="background"/><attr name="backgroundSplit"/><attr name="height"/><attr format="reference" name="closeItemLayout"/></declare-styleable>
+    <declare-styleable name="ActionView"><attr format="color" name="av_color"/><attr format="enum" name="av_action"><enum name="drawer" value="0"/><enum name="back" value="1"/><enum name="close" value="2"/><enum name="plus" value="3"/></attr></declare-styleable>
     <declare-styleable name="ActivityChooserView"><attr format="string" name="initialActivityCount"/><attr format="reference" name="expandActivityOverflowButtonDrawable"/></declare-styleable>
     <declare-styleable name="AdsAttrs"><attr format="string" name="adSize"/><attr format="string" name="adSizes"/><attr format="string" name="adUnitId"/></declare-styleable>
     <declare-styleable name="AnalogClock"><attr format="dimension" name="jewelRadius"/><attr format="dimension" name="jewelOffset"/><attr format="color" name="jewelColor"/></declare-styleable>
@@ -1376,7 +1377,7 @@
     <declare-styleable name="ViewStubCompat"><attr name="android:layout"/><attr name="android:inflatedId"/><attr name="android:id"/></declare-styleable>
     <declare-styleable name="WalletFragmentOptions"><attr format="enum" name="appTheme"><enum name="holo_dark" value="0"/><enum name="holo_light" value="1"/></attr><attr format="enum" name="environment"><enum name="production" value="1"/><enum name="sandbox" value="0"/><enum name="strict_sandbox" value="2"/></attr><attr format="reference" name="fragmentStyle"/><attr format="enum" name="fragmentMode"><enum name="buyButton" value="1"/><enum name="selectionDetails" value="2"/></attr></declare-styleable>
     <declare-styleable name="WalletFragmentStyle"><attr format="dimension" name="buyButtonHeight"><enum name="match_parent" value="-1"/><enum name="wrap_content" value="-2"/></attr><attr format="dimension" name="buyButtonWidth"><enum name="match_parent" value="-1"/><enum name="wrap_content" value="-2"/></attr><attr format="enum" name="buyButtonText"><enum name="buy_with_google" value="1"/><enum name="buy_now" value="2"/><enum name="book_now" value="3"/></attr><attr format="enum" name="buyButtonAppearance"><enum name="classic" value="1"/><enum name="grayscale" value="2"/><enum name="monochrome" value="3"/></attr><attr format="reference" name="maskedWalletDetailsTextAppearance"/><attr format="reference" name="maskedWalletDetailsHeaderTextAppearance"/><attr format="reference|color" name="maskedWalletDetailsBackground"/><attr format="reference" name="maskedWalletDetailsButtonTextAppearance"/><attr format="reference|color" name="maskedWalletDetailsButtonBackground"/><attr format="color" name="maskedWalletDetailsLogoTextColor"/><attr format="enum" name="maskedWalletDetailsLogoImageType"><enum name="classic" value="1"/><enum name="monochrome" value="2"/></attr></declare-styleable>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
     <eat-comment/>
     <dimen name="abc_action_bar_default_height_material">56dp</dimen>
     <dimen name="abc_action_bar_default_padding_material">4dp</dimen>
@@ -1415,7 +1416,7 @@
     <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
     <dimen name="abc_text_size_title_material">20sp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values/dimens.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="actionbar_tab_padding">0dip</dimen>
     <dimen name="actionbar_title_font_size">18sp</dimen>
@@ -1460,13 +1461,13 @@
     <dimen name="collapse_expand_height">72dip</dimen>
     <dimen name="date_text_size">15sp</dimen>
     <dimen name="dialog_button_font_size">16sp</dimen>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
     <eat-comment/>
     <item name="dialog_fixed_height_major" type="dimen">80%</item>
     <item name="dialog_fixed_height_minor" type="dimen">100%</item>
     <item name="dialog_fixed_width_major" type="dimen">320dp</item>
     <item name="dialog_fixed_width_minor" type="dimen">320dp</item>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values/dimens.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="dialpad_digit_padding">22dip</dimen>
     <dimen name="dialpad_font_size">36sp</dimen>
@@ -1475,11 +1476,11 @@
     <dimen name="digital_widget_list_margin_top">20dp</dimen>
     <dimen name="digital_widget_list_min_fixed_height">12dp</dimen>
     <dimen name="digital_widget_list_min_scaled_height">162dp</dimen>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
     <eat-comment/>
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values/dimens.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="footer_button_layout_margin">16dip</dimen>
     <dimen name="footer_button_size">56dip</dimen>
@@ -1499,12 +1500,12 @@
     <dimen name="min_digital_widget_resize_height">129dp</dimen>
     <dimen name="min_digital_widget_resize_width">206dp</dimen>
     <dimen name="min_digital_widget_width">206dp</dimen>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values/animation_constants.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values/animation_constants.xml -->
     <eat-comment/>
     <dimen name="min_lock">20dip</dimen>
     <dimen name="min_swipe">10dip</dimen>
     <dimen name="min_vert">10dip</dimen>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values/dimens.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="next_alarm_text_size">15sp</dimen>
     <dimen name="notification_icon_size">64dip</dimen>
@@ -1540,48 +1541,57 @@
     <dimen name="world_clock_analog_size">100dip</dimen>
     <dimen name="world_clock_end_padding">12dip</dimen>
     <dimen name="world_clock_margin">32dp</dimen>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
     <eat-comment/>
     <item name="action_bar_activity_content" type="id"/>
     <item name="action_bar_spinner" type="id"/>
     <item name="action_menu_divider" type="id"/>
     <item name="action_menu_presenter" type="id"/>
     <item name="home" type="id"/>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values/ids.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values/ids.xml -->
     <eat-comment/>
     <item name="numbers_key" type="id"/>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
     <eat-comment/>
     <item name="progress_circular" type="id"/>
     <item name="progress_horizontal" type="id"/>
     <item name="split_action_bar" type="id"/>
     <item name="up" type="id"/>
     <integer name="abc_max_action_buttons">2</integer>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values/config.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values/config.xml -->
     <eat-comment/>
     <item name="appwidget_world_clocks_per_row" type="integer">2</item>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values/animation_constants.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/build/intermediates/exploded-aar/com.github.markushi/android-ui/1.2/res/values/values.xml -->
+    <eat-comment/>
+    <integer name="av_animationDuration">340</integer>
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values/animation_constants.xml -->
     <eat-comment/>
     <integer name="dim_animation_duration">500</integer>
     <integer name="dismiss_animation_duration">500</integer>
     <integer name="escape_animation_duration">200</integer>
     <integer name="fade_duration">250</integer>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values/version.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values/version.xml -->
     <eat-comment/>
     <integer name="google_play_services_version">6171000</integer>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values/animation_constants.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values/animation_constants.xml -->
     <eat-comment/>
     <integer name="hide_animation_duration">200</integer>
     <integer name="max_dismiss_velocity">2000</integer>
     <integer name="max_escape_animation_duration">400</integer>
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/build/intermediates/exploded-aar/com.github.markushi/android-ui/1.2/res/values/values.xml -->
+    <eat-comment/>
+    <integer name="rcv_animationDurationHide">420</integer>
+    <integer name="rcv_animationDurationReveal">420</integer>
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values/animation_constants.xml -->
+    <eat-comment/>
     <integer name="snap_animation_duration">350</integer>
     <integer name="swipe_escape_velocity">100</integer>
     <integer name="swipe_scroll_slop">2</integer>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values/config.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values/config.xml -->
     <eat-comment/>
     <item name="timer_column_count" type="integer">1</item>
     <item name="world_clocks_per_row" type="integer">1</item>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <plurals name="Nhours_description">
         <!-- 1 hour -->
@@ -1637,10 +1647,10 @@
         <!-- more -->
         <item quantity="other"><ns1:g example="7" id="number">%d</ns1:g> timers</item>
     </plurals>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values/donottranslate.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values/donottranslate.xml -->
     <eat-comment/>
     <string name="abbrev_wday_month_day_no_year">EEEMMMMd</string>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
     <eat-comment/>
     <string name="abc_action_bar_home_description">Navigate home</string>
     <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
@@ -1658,10 +1668,10 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values/admob_strings.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values/admob_strings.xml -->
     <eat-comment/>
     <string name="accept">Accept</string>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="add_alarm">Add alarm</string>
     <string name="alarm_alert_dismiss_now_text">Dismiss Now</string>
@@ -1711,7 +1721,7 @@
     <string name="clock_settings">Clock</string>
     <string name="clock_style">Style</string>
     <string name="collapse_alarm">Collapse alarm</string>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values/common_strings.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values/common_strings.xml -->
     <eat-comment/>
     <string name="common_android_wear_notification_needs_update_text">An application requires an update to the Android Wear app.</string>
     <string name="common_android_wear_update_text">This app won\'t run unless you update the Android Wear app.</string>
@@ -1741,26 +1751,26 @@
     <string name="common_open_on_phone">Open on phone</string>
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="control_set_alarm">Set alarm</string>
     <string name="control_set_alarm_with_existing"><ns1:g id="time">%s</ns1:g></string>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values/admob_strings.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values/admob_strings.xml -->
     <eat-comment/>
     <string name="create_calendar_message">Allow Ad to create a calendar event?</string>
     <string name="create_calendar_title">Create calendar event</string>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="day">"1 day"</string>
     <string name="day_concat">", "</string>
     <string name="days">"<ns1:g id="days">%s</ns1:g> days"</string>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values/admob_strings.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values/admob_strings.xml -->
     <eat-comment/>
     <string name="decline">Decline</string>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values/donottranslate.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values/donottranslate.xml -->
     <eat-comment/>
     <string name="default_clock_style">digital</string>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="default_label">Alarm</string>
     <string name="default_ringtone_setting_title">Set default ringtone</string>
@@ -1778,10 +1788,10 @@
     <string name="enable_alarm">Turn alarm on</string>
     <string name="every_day">Every day</string>
     <string name="expand_alarm">Expand alarm</string>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values/donottranslate.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values/donottranslate.xml -->
     <eat-comment/>
     <string name="full_wday_month_day_no_year">EEEEMMMMd</string>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="gallery_button_description">Gallery</string>
     <string name="help">help</string>
@@ -1840,11 +1850,11 @@
     <string name="slash"> / </string>
     <string name="snooze_duration_title">Snooze length</string>
     <string name="stopwatch_service_desc">Stopwatch service to run the notification.</string>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values/admob_strings.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values/admob_strings.xml -->
     <eat-comment/>
     <string name="store_picture_message">"Allow Ad to store image in Picture gallery?"</string>
     <string name="store_picture_title">Save image</string>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="sw_lap_button">Lap</string>
     <string name="sw_notification_lap_number">Lap <ns1:g id="number">%d</ns1:g></string>
@@ -1882,20 +1892,19 @@
     <string name="timers_stopped"><ns1:g example="7" id="number">%d</ns1:g> timers stopped</string>
     <string name="volume_button_dialog_title">Button effect</string>
     <string name="volume_button_setting_title">Volume buttons</string>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values/wallet_strings.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values/wallet_strings.xml -->
     <eat-comment/>
     <string name="wallet_buy_button_place_holder" translation_description="Text on a button that allows a user to make a payment with Google Wallet [CHAR LIMIT=30]">Buy with Google</string>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="wc_widget_12_hours_format" translatable="false">h:mm <b><font face="sans-serif" size="14">a</font></b></string>
     <string name="weather_fetch_failure">Weather information isn\'t available right now.</string>
     <string name="world_clock_12_hours_format" translatable="false">h:mm <b><font face="sans-serif" size="14">a</font></b></string>
     <string name="world_day_of_week_label"> / <ns1:g id="label">%s</ns1:g></string>
     <string name="zero">0</string>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values/styles.xml -->
     <eat-comment/>
-    <style name="AlarmAlertFullScreenTheme" parent="@android:style/Theme.Material.Wallpaper.NoTitleBar">
-        <item name="android:windowTranslucentStatus">true</item>
+    <style name="AlarmAlertFullScreenTheme" parent="Theme.AppCompat.NoActionBar">
     </style>
     <style name="AlarmClockTheme" parent="@style/DeskClockParentTheme">
         <item name="android:actionBarStyle">@style/SettingsTheme.ActionBar</item>
@@ -1908,7 +1917,7 @@
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">16sp</item>
     </style>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
     <eat-comment/>
     <style name="Base.TextAppearance.AppCompat" parent="android:TextAppearance">
         <item name="android:textColor">?android:textColorPrimary</item>
@@ -2662,7 +2671,7 @@
         <item name="android:scaleType">center</item>
         <item name="android:background">?attr/selectableItemBackground</item>
     </style>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="BorderlessButton">
         <item name="android:background">?android:selectableItemBackground</item>
@@ -2706,7 +2715,7 @@
         <item name="android:background">@style/BorderlessButton</item>
         <item name="android:gravity">center</item>
     </style>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
     <eat-comment/>
     <style name="Platform.AppCompat" parent="android:Theme">
         <item name="android:windowNoTitle">true</item>
@@ -2833,7 +2842,7 @@
         <item name="android:listChoiceIndicatorMultiple">@drawable/abc_btn_check_material</item>
     </style>
     <style name="Platform.AppCompat.Light.Dialog" parent="Platform.AppCompat.Dialog"/>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="PrimaryLabelTextAppearance">
         <item name="android:fontFamily">sans-serif-medium</item>
@@ -2846,7 +2855,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@null</item>
     </style>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
     <eat-comment/>
     <style name="RtlOverlay.Widget.AppCompat.ActionBar.TitleItem" parent="android:Widget">
         <item name="android:layout_gravity">center_vertical|left</item>
@@ -2889,7 +2898,7 @@
     <style name="RtlOverlay.Widget.AppCompat.SearchView.MagIcon" parent="android:Widget">
         <item name="android:layout_marginLeft">@dimen/abc_dropdownitem_text_padding_left</item>
     </style>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="ScreensaverActivityTheme" parent="Theme.AppCompat.NoActionBar">
         <!-- Hide navigation bar when Dream is started from within the Clock app -->
@@ -2920,7 +2929,7 @@
         <item name="android:textSize">16sp</item>
         <item name="android:textStyle">normal</item>
     </style>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
     <eat-comment/>
     <style name="TextAppearance.AppCompat" parent="Base.TextAppearance.AppCompat"/>
     <style name="TextAppearance.AppCompat.Body1" parent="Base.TextAppearance.AppCompat.Body1"/>
@@ -2963,7 +2972,7 @@
     <style name="TextAppearance.AppCompat.Widget.PopupMenu.Large" parent="Base.TextAppearance.AppCompat.Widget.PopupMenu.Large"/>
     <style name="TextAppearance.AppCompat.Widget.PopupMenu.Small" parent="Base.TextAppearance.AppCompat.Widget.PopupMenu.Small"/>
     <style name="TextAppearance.AppCompat.Widget.Switch" parent="Base.TextAppearance.AppCompat.Widget.Switch"/>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="TextAppearance.StatusBar">
         <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
@@ -2976,7 +2985,7 @@
         <item name="android:textSize">@dimen/notification_title_text_size</item>
         <item name="android:textColor">@color/black_87p</item>
     </style>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
     <eat-comment/>
     <style name="TextAppearance.Widget.AppCompat.ExpandedMenu.Item" parent="Base.TextAppearance.Widget.AppCompat.ExpandedMenu.Item"/>
     <style name="TextAppearance.Widget.AppCompat.Toolbar.Subtitle" parent="Base.TextAppearance.Widget.AppCompat.Toolbar.Subtitle"/>
@@ -2997,7 +3006,7 @@
         <item name="windowActionBar">false</item>
         <item name="android:windowNoTitle">true</item>
     </style>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values/admob_iap_style.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values/admob_iap_style.xml -->
     <eat-comment/>
     <style name="Theme.IAPTheme" parent="android:Theme">
     <item name="android:windowIsTranslucent">true</item>
@@ -3007,14 +3016,14 @@
     <item name="android:windowIsFloating">true</item>
     <item name="android:backgroundDimEnabled">false</item>
   </style>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
     <eat-comment/>
     <style name="ThemeOverlay.AppCompat" parent="Base.ThemeOverlay.AppCompat"/>
     <style name="ThemeOverlay.AppCompat.ActionBar" parent="Base.ThemeOverlay.AppCompat.ActionBar"/>
     <style name="ThemeOverlay.AppCompat.Dark" parent="Base.ThemeOverlay.AppCompat.Dark"/>
     <style name="ThemeOverlay.AppCompat.Dark.ActionBar" parent="Base.ThemeOverlay.AppCompat.Dark.ActionBar"/>
     <style name="ThemeOverlay.AppCompat.Light" parent="Base.ThemeOverlay.AppCompat.Light"/>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="TimeLabelTextAppearance" parent="TextAppearance.AppCompat">
         <item name="android:textColor">@color/white</item>
@@ -3026,8 +3035,8 @@
         <item name="android:textColorPrimaryInverse">@color/hot_pink</item>
         <item name="colorAccent">@color/hot_pink</item>
     </style>
-    <style name="TimerAlertFullScreenTheme" parent="@android:style/Theme.Material.Wallpaper.NoTitleBar">
-        <item name="android:statusBarColor">@color/status_bar</item>
+    <style name="TimerAlertFullScreenTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
     </style>
     <style name="ToastBarStyle">
         <item name="android:layout_width">match_parent</item>
@@ -3042,7 +3051,7 @@
         <item name="android:alpha">0</item>
         <item name="android:clickable">true</item>
     </style>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values/wallet_styles.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values/wallet_styles.xml -->
     <eat-comment/>
     <style name="WalletFragmentDefaultButtonTextAppearance">
         <item name="android:textColor">@color/wallet_primary_text_holo_light</item>
@@ -3076,7 +3085,7 @@
         <item name="maskedWalletDetailsLogoTextColor">@color/wallet_bright_foreground_holo_dark</item>
         <item name="maskedWalletDetailsLogoImageType">classic</item>
     </style>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
     <eat-comment/>
     <style name="Widget.AppCompat.ActionBar" parent="Base.Widget.AppCompat.ActionBar"/>
     <style name="Widget.AppCompat.ActionBar.Solid" parent="Base.Widget.AppCompat.ActionBar.Solid"/>
@@ -3131,7 +3140,7 @@
     <style name="Widget.AppCompat.Spinner.DropDown.ActionBar" parent="Base.Widget.AppCompat.Spinner.DropDown.ActionBar"/>
     <style name="Widget.AppCompat.Toolbar" parent="Base.Widget.AppCompat.Toolbar"/>
     <style name="Widget.AppCompat.Toolbar.Button.Navigation" parent="Base.Widget.AppCompat.Toolbar.Button.Navigation"/>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="alarm_label">
         <item name="android:textSize">@dimen/alarm_label_size</item>

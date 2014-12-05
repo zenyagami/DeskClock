@@ -17,4 +17,4 @@
 <bitmap xmlns:android="http://schemas.android.com/apk/res/android"
     android:mipMap="true"
     android:src="@drawable/clock_analog_hour" />
-<!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/drawable/clock_analog_hour_mipmap.xml -->
+<!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/drawable/clock_analog_hour_mipmap.xml -->

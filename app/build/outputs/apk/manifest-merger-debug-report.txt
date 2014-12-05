@@ -8,7 +8,7 @@ ADDED from AndroidManifest.xml:1:1
 		INJECTED from AndroidManifest.xml:0:0
 		INJECTED from AndroidManifest.xml:0:0
 	android:versionName
-		ADDED from AndroidManifest.xml:3:35
+		ADDED from AndroidManifest.xml:3:33
 	android:versionCode
 		ADDED from AndroidManifest.xml:3:9
 		INJECTED from AndroidManifest.xml:0:0
@@ -59,6 +59,7 @@ MERGED from com.android.support:palette-v7:21.0.2:16:5
 MERGED from com.android.support:support-v4:21.0.2:16:5
 MERGED from com.android.support:appcompat-v7:21.0.2:16:5
 MERGED from com.android.support:support-v4:21.0.2:16:5
+MERGED from com.github.markushi:android-ui:1.2:9:5
 	android:supportsRtl
 		ADDED from AndroidManifest.xml:20:18
 	android:label
@@ -487,6 +488,7 @@ MERGED from com.android.support:palette-v7:21.0.2:15:5
 MERGED from com.android.support:support-v4:21.0.2:15:5
 MERGED from com.android.support:appcompat-v7:21.0.2:15:5
 MERGED from com.android.support:support-v4:21.0.2:15:5
+MERGED from com.github.markushi:android-ui:1.2:7:5
 	android:targetSdkVersion
 		INJECTED from AndroidManifest.xml:0:0
 		INJECTED from AndroidManifest.xml:0:0

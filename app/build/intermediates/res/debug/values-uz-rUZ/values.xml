@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values-uz-rUZ/strings.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values-uz-rUZ/strings.xml -->
     <eat-comment/>
     <string-array name="alarm_set">
     <item msgid="6450913786084215050">"Uyg‘otkich 1 daqiqadan kamroq vaqtdan so‘ng chalinadi."</item>
@@ -21,7 +21,7 @@
     <item msgid="7219791437023378544">"30 daqiqa"</item>
     <item msgid="4278641338024561333">"Hech qachon"</item>
   </string-array>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values-uz-rUZ/array.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values-uz-rUZ/array.xml -->
     <eat-comment/>
     <string-array name="cities_names">
     <item msgid="2528360178629244616">"Abidjan"</item>
@@ -324,7 +324,7 @@
     <item msgid="7087691675228926801">"Paramaribo"</item>
     <item msgid="478384295484578701">"Kito"</item>
   </string-array>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values-uz-rUZ/strings.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values-uz-rUZ/strings.xml -->
     <eat-comment/>
     <string-array name="clock_style_entries">
     <item msgid="917900462224167608">"Ko‘rsatkichli"</item>
@@ -476,7 +476,7 @@
     <item msgid="6764708652976799977" quantity="one">"1 daqiqa"</item>
     <item msgid="3799129667336330616" quantity="other">"<ns1:g id="NUMBER">%d</ns1:g> ta taymer"</item>
   </plurals>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values-uz-rUZ/values.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values-uz-rUZ/values.xml -->
     <eat-comment/>
     <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Boshiga o‘tish"</string>
     <string msgid="1397052879051804371" name="abc_action_bar_home_description_format">"%1$s, %2$s"</string>
@@ -492,7 +492,7 @@
     <string msgid="8928215447528550784" name="abc_searchview_description_submit">"So‘rov yaratish"</string>
     <string msgid="893419373245838918" name="abc_searchview_description_voice">"Ovozli qidiruv"</string>
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Bo‘lishish:"</string>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values-uz-rUZ/strings.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values-uz-rUZ/strings.xml -->
     <eat-comment/>
     <string msgid="5976616107390962899" name="add_alarm">"Uyg‘otkich qo‘shish"</string>
     <string msgid="3272183025444682500" name="alarm_alert_dismiss_now_text">"Yopish"</string>
@@ -540,7 +540,7 @@
     <string msgid="8317286807280600391" name="clock_settings">"Soat"</string>
     <string msgid="2265011060429742344" name="clock_style">"Turi"</string>
     <string msgid="3561772046433483980" name="collapse_alarm">"Yopish"</string>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-uz-rUZ/common_strings.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/res/values-uz-rUZ/common_strings.xml -->
     <eat-comment/>
     <string msgid="473679118463211576" name="common_android_wear_notification_needs_update_text">"Ilovadan foydalanish uchun Android Wear ilovasini yangilash lozim."</string>
     <string msgid="3046420540094071256" name="common_android_wear_update_text">"Ushbu ilova Android Wear ilovasi yangilanmaguncha ishlamaydi."</string>
@@ -570,7 +570,7 @@
     <string msgid="411506735369601515" name="common_open_on_phone">"Telefonda ochish"</string>
     <string msgid="9071884888741449141" name="common_signin_button_text">"Kirish"</string>
     <string msgid="2429381841831957106" name="common_signin_button_text_long">"Google orqali kirish"</string>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values-uz-rUZ/strings.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values-uz-rUZ/strings.xml -->
     <eat-comment/>
     <string msgid="2194676418924016327" name="control_set_alarm">"Uyg‘otkich o‘rnatish"</string>
     <string msgid="7984755014526510295" name="day">"1 kun"</string>

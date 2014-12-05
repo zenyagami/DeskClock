@@ -15,6 +15,7 @@
  */
 package com.android.deskclock.alarms;
 
+import android.annotation.TargetApi;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
@@ -23,6 +24,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
+import android.os.Build;
 import android.os.PowerManager;
 import android.preference.PreferenceManager;
 import android.widget.Toast;
@@ -32,6 +34,7 @@ import com.android.deskclock.AlarmClockFragment;
 import com.android.deskclock.AlarmUtils;
 import com.android.deskclock.AsyncHandler;
 import com.android.deskclock.DeskClock;
+import com.android.deskclock.FragmentSettings;
 import com.android.deskclock.LogUtils;
 import com.android.deskclock.R;
 import com.android.deskclock.SettingsActivity;
@@ -215,6 +218,7 @@ public final class AlarmStateManager extends BroadcastReceiver {
      * @param instance to change state to
      * @param newState to change to
      */
+    @TargetApi(Build.VERSION_CODES.KITKAT)
     private static void scheduleInstanceStateChange(Context context, Calendar time,
             AlarmInstance instance, int newState) {
         long timeInMillis = time.getTimeInMillis();
@@ -382,7 +386,7 @@ public final class AlarmStateManager extends BroadcastReceiver {
 
         // Calculate the new snooze alarm time
         String snoozeMinutesStr = PreferenceManager.getDefaultSharedPreferences(context)
-                .getString(SettingsActivity.KEY_ALARM_SNOOZE, DEFAULT_SNOOZE_MINUTES);
+                .getString(FragmentSettings.KEY_ALARM_SNOOZE, DEFAULT_SNOOZE_MINUTES);
         int snoozeMinutes = Integer.parseInt(snoozeMinutesStr);
         Calendar newAlarmTime = Calendar.getInstance();
         newAlarmTime.add(Calendar.MINUTE, snoozeMinutes);
@@ -413,7 +417,7 @@ public final class AlarmStateManager extends BroadcastReceiver {
 
     public static String getSnoozedMinutes(Context context) {
         final String snoozeMinutesStr = PreferenceManager.getDefaultSharedPreferences(context)
-                .getString(SettingsActivity.KEY_ALARM_SNOOZE, DEFAULT_SNOOZE_MINUTES);
+                .getString(FragmentSettings.KEY_ALARM_SNOOZE, DEFAULT_SNOOZE_MINUTES);
         final int snoozeMinutes = Integer.parseInt(snoozeMinutesStr);
         return context.getResources().getQuantityString(R.plurals.alarm_alert_snooze_duration,
                 snoozeMinutes, snoozeMinutes);

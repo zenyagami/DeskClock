@@ -25,6 +25,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
+import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
 import com.android.deskclock.DeskClock;
@@ -327,7 +328,7 @@ public class TimerReceiver extends BroadcastReceiver {
 
     private static void showCollapsedNotification(final Context context, String title, String text,
             int priority, PendingIntent pendingIntent, int notificationId, boolean showTicker) {
-        Notification.Builder builder = new Notification.Builder(context)
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(context)
                 .setAutoCancel(false)
                 .setContentTitle(title)
                 .setContentText(text)
@@ -336,7 +337,7 @@ public class TimerReceiver extends BroadcastReceiver {
                 .setPriority(priority)
                 .setShowWhen(false)
                 .setSmallIcon(R.drawable.stat_notify_timer)
-                .setCategory(Notification.CATEGORY_ALARM);
+                .setCategory(NotificationCompat.CATEGORY_ALARM);
         if (showTicker) {
             builder.setTicker(text);
         }
@@ -436,7 +437,7 @@ public class TimerReceiver extends BroadcastReceiver {
                 PendingIntent.FLAG_UPDATE_CURRENT);
 
         // Notification creation
-        Notification notification = new Notification.Builder(context)
+        Notification notification = new NotificationCompat.Builder(context)
                 .setContentIntent(contentIntent)
                 .addAction(R.drawable.ic_menu_add,
                         context.getResources().getString(R.string.timer_plus_1_min),

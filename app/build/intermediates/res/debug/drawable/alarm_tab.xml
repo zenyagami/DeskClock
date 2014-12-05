@@ -24,4 +24,4 @@
          android:drawable="@drawable/ic_tab_alarm_activated" />
    <item android:drawable="@drawable/ic_tab_alarm_normal" />
 </selector>
-<!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/drawable/alarm_tab.xml -->
+<!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/drawable/alarm_tab.xml -->

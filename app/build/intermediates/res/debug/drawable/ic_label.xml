@@ -22,4 +22,4 @@
     <item android:state_focused="false"
         android:drawable="@drawable/ic_label_normal" />
 </selector>
-<!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/drawable/ic_label.xml -->
+<!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/drawable/ic_label.xml -->

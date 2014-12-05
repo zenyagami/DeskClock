@@ -47,11 +47,14 @@ import android.widget.TextClock;
 import android.widget.TextView;
 
 import com.android.deskclock.AnimatorUtils;
+import com.android.deskclock.FragmentSettings;
 import com.android.deskclock.LogUtils;
 import com.android.deskclock.R;
 import com.android.deskclock.SettingsActivity;
 import com.android.deskclock.Utils;
 import com.android.deskclock.provider.AlarmInstance;
+
+import at.markushi.ui.RevealColorView;
 
 public class AlarmActivity extends ActionBarActivity implements View.OnClickListener, View.OnTouchListener {
 
@@ -67,11 +70,6 @@ public class AlarmActivity extends ActionBarActivity implements View.OnClickList
     public static final String ALARM_DISMISS_ACTION = "com.android.deskclock.ALARM_DISMISS";
 
     private static final String LOGTAG = AlarmActivity.class.getSimpleName();
-
-    private static final Interpolator PULSE_INTERPOLATOR =
-            new PathInterpolator(0.4f, 0.0f, 0.2f, 1.0f);
-    private static final Interpolator REVEAL_INTERPOLATOR =
-            new PathInterpolator(0.0f, 0.0f, 0.2f, 1.0f);
 
     private static final int PULSE_DURATION_MILLIS = 1000;
     private static final int ALARM_BOUNCE_DURATION_MILLIS = 500;
@@ -150,8 +148,8 @@ public class AlarmActivity extends ActionBarActivity implements View.OnClickList
 
         // Get the volume/camera button behavior setting
         mVolumeBehavior = PreferenceManager.getDefaultSharedPreferences(this)
-                .getString(SettingsActivity.KEY_VOLUME_BEHAVIOR,
-                        SettingsActivity.DEFAULT_VOLUME_BEHAVIOR);
+                .getString(FragmentSettings.KEY_VOLUME_BEHAVIOR,
+                        FragmentSettings.DEFAULT_VOLUME_BEHAVIOR);
 
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED
                 | WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD
@@ -206,7 +204,10 @@ public class AlarmActivity extends ActionBarActivity implements View.OnClickList
                 PropertyValuesHolder.ofFloat(View.SCALE_Y, 0.0f, 1.0f),
                 PropertyValuesHolder.ofFloat(View.ALPHA, 1.0f, 0.0f));
         mPulseAnimator.setDuration(PULSE_DURATION_MILLIS);
-        mPulseAnimator.setInterpolator(PULSE_INTERPOLATOR);
+        if(Utils.isLP())
+        {
+            mPulseAnimator.setInterpolator(new PathInterpolator(0.4f, 0.0f, 0.2f, 1.0f));
+        }
         mPulseAnimator.setRepeatCount(ValueAnimator.INFINITE);
         mPulseAnimator.start();
 
@@ -246,10 +247,10 @@ public class AlarmActivity extends ActionBarActivity implements View.OnClickList
             case KeyEvent.KEYCODE_FOCUS:
                 if (!mAlarmHandled && keyEvent.getAction() == KeyEvent.ACTION_UP) {
                     switch (mVolumeBehavior) {
-                        case SettingsActivity.VOLUME_BEHAVIOR_SNOOZE:
+                        case FragmentSettings.VOLUME_BEHAVIOR_SNOOZE:
                             snooze();
                             break;
-                        case SettingsActivity.VOLUME_BEHAVIOR_DISMISS:
+                        case FragmentSettings.VOLUME_BEHAVIOR_DISMISS:
                             dismiss();
                             break;
                         default:
@@ -412,7 +413,12 @@ public class AlarmActivity extends ActionBarActivity implements View.OnClickList
         final ViewGroupOverlay overlay = mContainerView.getOverlay();
 
         // Create a transient view for performing the reveal animation.
-        final View revealView = new View(this);
+        final View revealView;
+        if (Utils.isLP()) {
+            revealView = new View(this);
+        } else {
+            revealView = new RevealColorView(this);
+        }
         revealView.setRight(mContainerView.getWidth());
         revealView.setBottom(mContainerView.getHeight());
         revealView.setBackgroundColor(revealColor);
@@ -439,12 +445,7 @@ public class AlarmActivity extends ActionBarActivity implements View.OnClickList
                 overlay.remove(source);
             }
         });
-
-        final Animator revealAnimator = ViewAnimationUtils.createCircularReveal(
-                revealView, centerX, centerY, startRadius, endRadius);
-        revealAnimator.setDuration(ALERT_REVEAL_DURATION_MILLIS);
-        revealAnimator.setInterpolator(REVEAL_INTERPOLATOR);
-        revealAnimator.addListener(new AnimatorListenerAdapter() {
+        AnimatorListenerAdapter animatorListenerAdapter= new AnimatorListenerAdapter() {
             @Override
             public void onAnimationEnd(Animator animator) {
                 mAlertView.setVisibility(View.VISIBLE);
@@ -456,7 +457,19 @@ public class AlarmActivity extends ActionBarActivity implements View.OnClickList
                 mContentView.setVisibility(View.GONE);
                 mContainerView.setBackgroundColor(backgroundColor);
             }
-        });
+        };
+        Animator revealAnimator=null;
+        if (Utils.isLP())
+        {
+            revealAnimator = ViewAnimationUtils.createCircularReveal(
+                    revealView, centerX, centerY, startRadius, endRadius);
+            revealAnimator.setDuration(ALERT_REVEAL_DURATION_MILLIS);
+            revealAnimator.addListener(animatorListenerAdapter);
+            revealAnimator.setInterpolator( new PathInterpolator(0.0f, 0.0f, 0.2f, 1.0f));
+        }else
+        {
+            ((RevealColorView)revealView).reveal(centerX,centerY, revealColor, (int) startRadius,ALERT_REVEAL_DURATION_MILLIS, animatorListenerAdapter);
+        }
 
         final ValueAnimator fadeAnimator = ObjectAnimator.ofFloat(revealView, View.ALPHA, 0.0f);
         fadeAnimator.setDuration(ALERT_FADE_DURATION_MILLIS);
@@ -466,9 +479,7 @@ public class AlarmActivity extends ActionBarActivity implements View.OnClickList
                 overlay.remove(revealView);
             }
         });
-
         final AnimatorSet alertAnimator = new AnimatorSet();
-        alertAnimator.play(revealAnimator).with(sourceAnimator).before(fadeAnimator);
         alertAnimator.addListener(new AnimatorListenerAdapter() {
             @Override
             public void onAnimationEnd(Animator animator) {
@@ -480,6 +491,13 @@ public class AlarmActivity extends ActionBarActivity implements View.OnClickList
                 }, ALERT_DISMISS_DELAY_MILLIS);
             }
         });
+        if(revealAnimator!=null)
+        {
+            alertAnimator.play(revealAnimator).with(sourceAnimator).before(fadeAnimator);
+        }else
+        {
+            alertAnimator.play(sourceAnimator).before(fadeAnimator);
+        }
 
         return alertAnimator;
     }

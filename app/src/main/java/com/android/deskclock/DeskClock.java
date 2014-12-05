@@ -379,13 +379,13 @@ public class DeskClock extends ActionBarActivity implements LabelDialogFragment.
      */
     private void setHomeTimeZone() {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        String homeTimeZone = prefs.getString(SettingsActivity.KEY_HOME_TZ, "");
+        String homeTimeZone = prefs.getString(FragmentSettings.KEY_HOME_TZ, "");
         if (!homeTimeZone.isEmpty()) {
             return;
         }
         homeTimeZone = TimeZone.getDefault().getID();
         SharedPreferences.Editor editor = prefs.edit();
-        editor.putString(SettingsActivity.KEY_HOME_TZ, homeTimeZone);
+        editor.putString(FragmentSettings.KEY_HOME_TZ, homeTimeZone);
         editor.apply();
         Log.v(LOG_TAG, "Setting home time zone to " + homeTimeZone);
     }

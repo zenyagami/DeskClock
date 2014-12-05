@@ -35,4 +35,4 @@
           android:layout_marginTop="@dimen/digital_widget_list_margin_top"
           android:divider="@null" />
 </LinearLayout>
-<!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/layout/digital_appwidget.xml -->
+<!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/layout/digital_appwidget.xml -->

@@ -175,7 +175,7 @@ public class ScreensaverActivity extends ActionBarActivity {
 
     private void setClockStyle() {
         Utils.setClockStyle(this, mDigitalClock, mAnalogClock,
-                SettingsActivity.KEY_CLOCK_STYLE);
+                FragmentSettings.KEY_CLOCK_STYLE);
         mSaverView = findViewById(R.id.main_clock);
         mClockStyle = (mSaverView == mDigitalClock ?
                 Utils.CLOCK_TYPE_DIGITAL : Utils.CLOCK_TYPE_ANALOG);

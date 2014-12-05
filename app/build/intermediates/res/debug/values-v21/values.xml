@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values-v21/styles.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values-v21/styles.xml -->
     <eat-comment/>
+    <style name="AlarmAlertFullScreenTheme" parent="@android:style/Theme.Material.Wallpaper.NoTitleBar">
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
     <style name="AlarmSwitchTheme">
         <item name="android:colorControlActivated">@color/hot_pink</item>
     </style>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values-v21/values.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values-v21/values.xml -->
     <eat-comment/>
     <style name="Base.TextAppearance.AppCompat" parent="android:TextAppearance.Material"/>
     <style name="Base.TextAppearance.AppCompat.Body1" parent="android:TextAppearance.Material.Body1"/>
@@ -258,7 +261,7 @@
         <item name="popupPromptView">@layout/abc_simple_dropdown_hint</item>
     </style>
     <style name="Base.Widget.AppCompat.Toolbar.Button.Navigation" parent="android:Widget.Material.Toolbar.Button.Navigation"/>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values-v21/styles.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values-v21/styles.xml -->
     <eat-comment/>
     <style name="BorderlessButton">
         <item name="android:background">?android:selectableItemBackgroundBorderless</item>
@@ -279,7 +282,7 @@
         <item name="android:textColor">@color/black</item>
         <item name="android:padding">24dip</item>
     </style>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values-v21/values.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values-v21/values.xml -->
     <eat-comment/>
     <style name="Platform.AppCompat" parent="android:Theme.Material">
         <item name="android:windowNoTitle">true</item>
@@ -297,7 +300,7 @@
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowActionBar">false</item>
     </style>
-    <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/src/main/res/values-v21/styles.xml -->
+    <!-- From: file:/C:/Users/zen/Documents/AndroidStudioWorkspace/DeskClock/app/src/main/res/values-v21/styles.xml -->
     <eat-comment/>
     <style name="TimePickerStyle" parent="@android:style/Widget.Material.TimePicker">
         <item name="android:headerBackground">@color/time_picker_gray</item>
@@ -306,6 +309,9 @@
         <item name="android:numbersBackgroundColor">@color/time_picker_gray</item>
         <item name="android:numbersTextColor">@color/white</item>
         <item name="android:amPmTextColor">@color/white</item>
+    </style>
+    <style name="TimerAlertFullScreenTheme" parent="@android:style/Theme.Material.Wallpaper.NoTitleBar">
+        <item name="android:statusBarColor">@color/status_bar</item>
     </style>
     <style name="button">
         <item name="android:background">?selectableItemBackground</item>

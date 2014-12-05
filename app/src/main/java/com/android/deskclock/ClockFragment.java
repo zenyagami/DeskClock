@@ -237,7 +237,7 @@ public class ClockFragment extends DeskClockFragment implements OnSharedPreferen
         }
         // Resume can invoked after changing the clock style.
         View clockView = Utils.setClockStyle(activity, mDigitalClock, mAnalogClock,
-                SettingsActivity.KEY_CLOCK_STYLE);
+                FragmentSettings.KEY_CLOCK_STYLE);
         mClockStyle = (clockView == mDigitalClock ?
                 Utils.CLOCK_TYPE_DIGITAL : Utils.CLOCK_TYPE_ANALOG);
 
@@ -270,8 +270,8 @@ public class ClockFragment extends DeskClockFragment implements OnSharedPreferen
 
     @Override
     public void onSharedPreferenceChanged(SharedPreferences prefs, String key) {
-        if (key == SettingsActivity.KEY_CLOCK_STYLE) {
-            mClockStyle = prefs.getString(SettingsActivity.KEY_CLOCK_STYLE, mDefaultClockStyle);
+        if (key == FragmentSettings.KEY_CLOCK_STYLE) {
+            mClockStyle = prefs.getString(FragmentSettings.KEY_CLOCK_STYLE, mDefaultClockStyle);
             mAdapter.notifyDataSetChanged();
         }
     }

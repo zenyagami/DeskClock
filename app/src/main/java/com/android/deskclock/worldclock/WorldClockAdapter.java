@@ -27,6 +27,7 @@ import android.widget.TextClock;
 import android.widget.TextView;
 
 import com.android.deskclock.AnalogClock;
+import com.android.deskclock.FragmentSettings;
 import com.android.deskclock.R;
 import com.android.deskclock.SettingsActivity;
 import com.android.deskclock.Utils;
@@ -65,7 +66,7 @@ public class WorldClockAdapter extends BaseAdapter {
 
     public void loadData(Context context) {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(mContext);
-        mClockStyle = prefs.getString(SettingsActivity.KEY_CLOCK_STYLE,
+        mClockStyle = prefs.getString(FragmentSettings.KEY_CLOCK_STYLE,
                 mContext.getResources().getString(R.string.default_clock_style));
         mCitiesList = Cities.readCitiesFromSharedPrefs(prefs).values().toArray();
         sortList();
@@ -93,7 +94,7 @@ public class WorldClockAdapter extends BaseAdapter {
     private Object[] addHomeCity() {
         if (needHomeCity()) {
             SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(mContext);
-            String homeTZ = sharedPref.getString(SettingsActivity.KEY_HOME_TZ, "");
+            String homeTZ = sharedPref.getString(FragmentSettings.KEY_HOME_TZ, "");
             CityObj c = new CityObj(
                     mContext.getResources().getString(R.string.home_label), homeTZ, null);
             Object[] temp = new Object[mCitiesList.length + 1];
@@ -117,9 +118,9 @@ public class WorldClockAdapter extends BaseAdapter {
 
     public boolean needHomeCity() {
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(mContext);
-        if (sharedPref.getBoolean(SettingsActivity.KEY_AUTO_HOME_CLOCK, false)) {
+        if (sharedPref.getBoolean(FragmentSettings.KEY_AUTO_HOME_CLOCK, false)) {
             String homeTZ = sharedPref.getString(
-                    SettingsActivity.KEY_HOME_TZ, TimeZone.getDefault().getID());
+                    FragmentSettings.KEY_HOME_TZ, TimeZone.getDefault().getID());
             final Date now = new Date();
             return TimeZone.getTimeZone(homeTZ).getOffset(now.getTime())
                     != TimeZone.getDefault().getOffset(now.getTime());

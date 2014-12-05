@@ -21,6 +21,7 @@ import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
 import android.animation.TypeEvaluator;
 import android.animation.ValueAnimator;
+import android.graphics.PorterDuff;
 import android.util.Property;
 import android.view.View;
 import android.view.animation.Interpolator;
@@ -75,7 +76,14 @@ public class AnimatorUtils {
 
         @Override
         public void set(ImageView view, Integer value) {
-            view.getDrawable().setTint(value);
+            if(Utils.isLP())
+            {
+                view.getDrawable().setTint(value);
+            }else
+            {
+                view.setColorFilter(value, PorterDuff.Mode.MULTIPLY);
+            }
+
         }
     };
 
