@@ -958,7 +958,10 @@ public class AlarmClockFragment extends DeskClockFragment implements
                             // See if this was the last day, if so, un-check the repeat box.
                             if (!alarm.daysOfWeek.isRepeating()) {
                                 // Animate the resulting layout changes.
-                                TransitionManager.beginDelayedTransition(mList, mRepeatTransition);
+                                if(Utils.isKK())
+                                {
+                                    TransitionManager.beginDelayedTransition(mList, mRepeatTransition);
+                                }
 
                                 itemHolder.repeat.setChecked(false);
                                 itemHolder.repeatDays.setVisibility(View.GONE);
