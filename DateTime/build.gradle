@@ -5,7 +5,7 @@ android {
     buildToolsVersion "21.1.1"
 
     defaultConfig {
-        minSdkVersion 14
+        minSdkVersion 17
         targetSdkVersion 21
     }
 
@@ -17,5 +17,5 @@ android {
     }
 }
 dependencies {
-    compile 'com.android.support:support-v13:21.0.+'
+    compile 'com.android.support:support-v13:21.0.0'
 }

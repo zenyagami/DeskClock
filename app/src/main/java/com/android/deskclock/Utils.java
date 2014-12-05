@@ -39,6 +39,7 @@ import android.os.Build;
 import android.os.Handler;
 import android.os.SystemClock;
 import android.preference.PreferenceManager;
+import android.provider.Settings;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.TextUtils;
@@ -464,6 +465,7 @@ public class Utils {
     /**
      * @return The next alarm from {@link AlarmManager}
      */
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public static String getNextAlarm(Context context) {
         String timeString = null;
         //TODO buscar su equivalencia de getNextAlarmClock()
@@ -471,6 +473,10 @@ public class Utils {
         if(Utils.isLP())
         {
             info= ((AlarmManager) context.getSystemService(Context.ALARM_SERVICE)).getNextAlarmClock();
+        }else
+        {
+            return Settings.System.getString(context.getContentResolver(),
+                    Settings.System.NEXT_ALARM_FORMATTED);
         }
         if (info != null) {
             final long triggerTime = info.getTriggerTime();

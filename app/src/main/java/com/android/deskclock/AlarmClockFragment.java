@@ -146,9 +146,13 @@ public class AlarmClockFragment extends DeskClockFragment implements
     private Interpolator mExpandInterpolator;
     private Interpolator mCollapseInterpolator;
 
-    private Transition mAddRemoveTransition;
-    private Transition mRepeatTransition;
-    private Transition mEmptyViewTransition;
+    private Object mAddRemoveTransition;
+    private Object mRepeatTransition;
+    private Object mEmptyViewTransition;
+
+
+    //support
+
 
     public AlarmClockFragment() {
         // Basic provider required by Fragment.java
@@ -188,17 +192,32 @@ public class AlarmClockFragment extends DeskClockFragment implements
         if(Utils.isKK())
         {
             mAddRemoveTransition = new AutoTransition();
-            mAddRemoveTransition.setDuration(ANIMATION_DURATION);
+            ((Transition) mAddRemoveTransition).setDuration(ANIMATION_DURATION);
 
             mRepeatTransition = new AutoTransition();
-            mRepeatTransition.setDuration(ANIMATION_DURATION / 2);
-            mRepeatTransition.setInterpolator(new AccelerateDecelerateInterpolator());
+            ((Transition)mRepeatTransition).setDuration(ANIMATION_DURATION / 2);
+            ((Transition)mRepeatTransition).setInterpolator(new AccelerateDecelerateInterpolator());
 
             mEmptyViewTransition = new TransitionSet()
                     .setOrdering(TransitionSet.ORDERING_SEQUENTIAL)
                     .addTransition(new Fade(Fade.OUT))
                     .addTransition(new Fade(Fade.IN))
                     .setDuration(ANIMATION_DURATION);
+        }else
+        {
+            mAddRemoveTransition = new android.support.transition.AutoTransition();
+            ((android.support.transition.Transition) mAddRemoveTransition).setDuration(ANIMATION_DURATION);
+
+            mRepeatTransition = new AutoTransition();
+            ((android.support.transition.Transition)mRepeatTransition).setDuration(ANIMATION_DURATION / 2);
+            ((android.support.transition.Transition)mRepeatTransition).setInterpolator(new AccelerateDecelerateInterpolator());
+
+            mEmptyViewTransition = new TransitionSet()
+                    .setOrdering(TransitionSet.ORDERING_SEQUENTIAL)
+                    .addTransition(new Fade(Fade.OUT))
+                    .addTransition(new Fade(Fade.IN))
+                    .setDuration(ANIMATION_DURATION);
+
         }
 
 
@@ -242,7 +261,14 @@ public class AlarmClockFragment extends DeskClockFragment implements
 
                 if ((count == 0 && prevAdapterCount > 0) ||  /* should fade in */
                         (count > 0 && prevAdapterCount == 0) /* should fade out */) {
-                    TransitionManager.beginDelayedTransition(mMainLayout, mEmptyViewTransition);
+                    if(Utils.isKK())
+                    {
+                        TransitionManager.beginDelayedTransition(mMainLayout,(Transition) mEmptyViewTransition);
+                    }else
+                    {
+                        android.support.transition.TransitionManager.beginDelayedTransition(mMainLayout,(android.support.transition.Transition)mEmptyViewTransition);
+                    }
+
                 }
                 mEmptyView.setVisibility(count == 0 ? View.VISIBLE : View.GONE);
 
@@ -669,7 +695,11 @@ public class AlarmClockFragment extends DeskClockFragment implements
         public synchronized Cursor swapCursor(Cursor cursor) {
             if (mAddedAlarm != null || mDeletedAlarm != null) {
                 if(Utils.isKK())
-                    TransitionManager.beginDelayedTransition(mAlarmsList, mAddRemoveTransition);
+                    TransitionManager.beginDelayedTransition(mAlarmsList, (Transition)mAddRemoveTransition);
+                else
+                {
+                    android.support.transition.TransitionManager.beginDelayedTransition(mAlarmsList,(android.support.transition.Transition)mAddRemoveTransition);
+                }
             }
 
             final Cursor c = super.swapCursor(cursor);
@@ -906,7 +936,15 @@ public class AlarmClockFragment extends DeskClockFragment implements
                 @Override
                 public void onClick(View view) {
                     // Animate the resulting layout changes.
-                    TransitionManager.beginDelayedTransition(mList, mRepeatTransition);
+
+                    if(Utils.isKK())
+                    {
+                        TransitionManager.beginDelayedTransition(mList, (Transition)mRepeatTransition);
+                    }else
+                    {
+                        android.support.transition.TransitionManager.beginDelayedTransition(mList,(android.support.transition.Transition)mRepeatTransition);
+                    }
+
 
                     final boolean checked = ((CheckBox) view).isChecked();
                     if (checked) {
@@ -960,7 +998,11 @@ public class AlarmClockFragment extends DeskClockFragment implements
                                 // Animate the resulting layout changes.
                                 if(Utils.isKK())
                                 {
-                                    TransitionManager.beginDelayedTransition(mList, mRepeatTransition);
+                                    TransitionManager.beginDelayedTransition(mList,(Transition) mRepeatTransition);
+                                }else
+                                {
+                                    android.support.transition.TransitionManager.beginDelayedTransition(mList,(android.support.transition.Transition)mRepeatTransition);
+
                                 }
 
                                 itemHolder.repeat.setChecked(false);

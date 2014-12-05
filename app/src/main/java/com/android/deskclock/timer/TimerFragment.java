@@ -72,7 +72,7 @@ public class TimerFragment extends DeskClockFragment implements OnSharedPreferen
     private View mTimerView;
     private View mLastView;
     private ImageView[] mPageIndicators = new ImageView[PAGINATION_DOTS_COUNT];
-    private Transition mDeleteTransition;
+    private Object mDeleteTransition;
     private SharedPreferences mPrefs;
     private Bundle mViewState = null;
     private NotificationManager mNotificationManager;
@@ -173,8 +173,13 @@ public class TimerFragment extends DeskClockFragment implements OnSharedPreferen
         if(Utils.isKK())
         {
             mDeleteTransition = new AutoTransition();
-            mDeleteTransition.setDuration(ANIMATION_TIME_MILLIS / 2);
-            mDeleteTransition.setInterpolator(new AccelerateDecelerateInterpolator());
+            ((Transition) mDeleteTransition).setDuration(ANIMATION_TIME_MILLIS / 2);
+            ((Transition) mDeleteTransition).setInterpolator(new AccelerateDecelerateInterpolator());
+        }else
+        {
+            mDeleteTransition = new android.support.transition.AutoTransition();
+            ((android.support.transition.Transition)mDeleteTransition).setDuration(ANIMATION_TIME_MILLIS / 2);
+            ((android.support.transition.Transition)mDeleteTransition).setInterpolator(new AccelerateDecelerateInterpolator());
         }
 
 
@@ -586,7 +591,13 @@ public class TimerFragment extends DeskClockFragment implements OnSharedPreferen
             createRotateAnimator(adapter, true).start();
         } else {
             if(Utils.isKK())
-                TransitionManager.beginDelayedTransition(mContentView, mDeleteTransition);
+            {
+                TransitionManager.beginDelayedTransition(mContentView, (Transition)mDeleteTransition);
+            }else
+            {
+                android.support.transition.TransitionManager.beginDelayedTransition(mContentView,(android.support.transition.Transition)mDeleteTransition);
+            }
+
             deleteTimer(timer);
         }
     }

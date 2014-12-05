@@ -1,1 +1,1 @@
-include ':app', ':DateTime'
+include ':app', ':DateTime', ':library'
