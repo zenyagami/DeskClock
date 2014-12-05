@@ -16,7 +16,6 @@
 
 package com.android.deskclock.worldclock;
 
-import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
@@ -25,6 +24,7 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.SearchView;
 import android.text.TextUtils;
 import android.text.format.DateFormat;
 import android.util.TypedValue;
@@ -42,8 +42,6 @@ import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.ListView;
-import android.widget.SearchView;
-import android.widget.SearchView.OnQueryTextListener;
 import android.widget.SectionIndexer;
 import android.widget.TextView;
 
@@ -65,7 +63,7 @@ import java.util.TimeZone;
  * Cities chooser for the world clock
  */
 public class CitiesActivity extends ActionBarActivity implements OnCheckedChangeListener,
-        View.OnClickListener, OnQueryTextListener {
+        View.OnClickListener, SearchView.OnQueryTextListener {
 
     private static final String KEY_SEARCH_QUERY = "search_query";
     private static final String KEY_SEARCH_MODE = "search_mode";
@@ -80,8 +78,8 @@ public class CitiesActivity extends ActionBarActivity implements OnCheckedChange
      * This must be false for production. If true, turns on logging, test code,
      * etc.
      */
-    static final boolean DEBUG = false;
-    static final String TAG = "CitiesActivity";
+    //static final boolean DEBUG = false;
+    //static final String TAG = "CitiesActivity";
 
     private LayoutInflater mFactory;
     private ListView mCitiesList;
@@ -134,7 +132,7 @@ public class CitiesActivity extends ActionBarActivity implements OnCheckedChange
         private final String mPattern12;
         private final String mPattern24;
 
-        private int mSelectedEndPosition = 0;
+        //private int mSelectedEndPosition = 0;
 
         private Filter mFilter = new Filter() {
 
@@ -169,7 +167,7 @@ public class CitiesActivity extends ActionBarActivity implements OnCheckedChange
                 for (CityObj c : mSelectedCities) {
                     selectedCityIds.add(c.mCityId);
                 }
-                mSelectedEndPosition = filteredList.size();
+                //mSelectedEndPosition = filteredList.size();
 
                 long currentTime = System.currentTimeMillis();
                 String val = null;

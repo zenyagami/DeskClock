@@ -2703,7 +2703,7 @@
     <style name="DeskClockTabStyle" parent="@style/DeskClockParentTheme">
         <item name="android:paddingLeft">@dimen/actionbar_tab_padding</item>
         <item name="android:paddingRight">@dimen/actionbar_tab_padding</item>
-        <item name="android:background">?android:attr/selectableItemBackgroundBorderless</item>
+        <item name="android:background">@style/BorderlessButton</item>
         <item name="android:gravity">center</item>
     </style>
     <!-- From: file:/Users/zebstudios/Documents/AndroidStudioWorkspace/DeskClock1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values/values.xml -->
@@ -3168,7 +3168,7 @@
         <item name="android:textStyle">bold</item>
     </style>
     <style name="button">
-        <item name="android:background">?android:attr/selectableItemBackgroundBorderless</item>
+        <item name="android:background">?selectableItemBackground</item>
         <item name="android:textSize">@dimen/button_font_size</item>
     </style>
     <style name="clock">
@@ -3179,7 +3179,7 @@
     <style name="dialpad">
         <item name="android:textSize">@dimen/dialpad_font_size</item>
         <item name="android:fontFamily">sans-serif-thin</item>
-        <item name="android:background">@style/BorderlessButton</item>
+        <item name="android:background">?selectableItemBackground</item>
     </style>
     <style name="header">
         <item name="android:textSize">@dimen/header_font_size</item>

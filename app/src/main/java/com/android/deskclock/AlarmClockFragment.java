@@ -20,6 +20,7 @@ import android.animation.Animator;
 import android.animation.Animator.AnimatorListener;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
@@ -40,8 +41,10 @@ import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Vibrator;
+import android.support.v7.widget.SwitchCompat;
 import android.transition.AutoTransition;
 import android.transition.Fade;
 import android.transition.Transition;
@@ -156,6 +159,7 @@ public class AlarmClockFragment extends DeskClockFragment implements
         mCursorLoader = getLoaderManager().initLoader(0, null, this);
     }
 
+    @TargetApi(Build.VERSION_CODES.KITKAT)
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedState) {
@@ -180,18 +184,22 @@ public class AlarmClockFragment extends DeskClockFragment implements
         mExpandInterpolator = new DecelerateInterpolator(EXPAND_DECELERATION);
         mCollapseInterpolator = new DecelerateInterpolator(COLLAPSE_DECELERATION);
 
-        mAddRemoveTransition = new AutoTransition();
-        mAddRemoveTransition.setDuration(ANIMATION_DURATION);
+        if(Utils.isKK())
+        {
+            mAddRemoveTransition = new AutoTransition();
+            mAddRemoveTransition.setDuration(ANIMATION_DURATION);
 
-        mRepeatTransition = new AutoTransition();
-        mRepeatTransition.setDuration(ANIMATION_DURATION / 2);
-        mRepeatTransition.setInterpolator(new AccelerateDecelerateInterpolator());
+            mRepeatTransition = new AutoTransition();
+            mRepeatTransition.setDuration(ANIMATION_DURATION / 2);
+            mRepeatTransition.setInterpolator(new AccelerateDecelerateInterpolator());
 
-        mEmptyViewTransition = new TransitionSet()
-                .setOrdering(TransitionSet.ORDERING_SEQUENTIAL)
-                .addTransition(new Fade(Fade.OUT))
-                .addTransition(new Fade(Fade.IN))
-                .setDuration(ANIMATION_DURATION);
+            mEmptyViewTransition = new TransitionSet()
+                    .setOrdering(TransitionSet.ORDERING_SEQUENTIAL)
+                    .addTransition(new Fade(Fade.OUT))
+                    .addTransition(new Fade(Fade.IN))
+                    .setDuration(ANIMATION_DURATION);
+        }
+
 
         boolean isLandscape = getResources().getConfiguration().orientation
                 == Configuration.ORIENTATION_LANDSCAPE;
@@ -528,7 +536,7 @@ public class AlarmClockFragment extends DeskClockFragment implements
             LinearLayout alarmItem;
             TextTime clock;
             TextView tomorrowLabel;
-            Switch onoff;
+            SwitchCompat onoff;
             TextView daysOfWeek;
             TextView label;
             ImageButton delete;
@@ -634,7 +642,8 @@ public class AlarmClockFragment extends DeskClockFragment implements
         @Override
         public synchronized Cursor swapCursor(Cursor cursor) {
             if (mAddedAlarm != null || mDeletedAlarm != null) {
-                TransitionManager.beginDelayedTransition(mAlarmsList, mAddRemoveTransition);
+                if(Utils.isKK())
+                    TransitionManager.beginDelayedTransition(mAlarmsList, mAddRemoveTransition);
             }
 
             final Cursor c = super.swapCursor(cursor);
@@ -651,7 +660,7 @@ public class AlarmClockFragment extends DeskClockFragment implements
             holder.alarmItem = (LinearLayout) view.findViewById(R.id.alarm_item);
             holder.tomorrowLabel = (TextView) view.findViewById(R.id.tomorrowLabel);
             holder.clock = (TextTime) view.findViewById(R.id.digital_clock);
-            holder.onoff = (Switch) view.findViewById(R.id.onoff);
+            holder.onoff = (SwitchCompat) view.findViewById(R.id.onoff);
             holder.onoff.setTypeface(mRobotoNormal);
             holder.daysOfWeek = (TextView) view.findViewById(R.id.daysOfWeek);
             holder.label = (TextView) view.findViewById(R.id.label);
@@ -819,10 +828,12 @@ public class AlarmClockFragment extends DeskClockFragment implements
         private void setAlarmItemBackgroundAndElevation(LinearLayout layout, boolean expanded) {
             if (expanded) {
                 layout.setBackgroundColor(getTintedBackgroundColor());
-                layout.setElevation(ALARM_ELEVATION);
+                if(Utils.isLP())
+                    layout.setElevation(ALARM_ELEVATION);
             } else {
                 layout.setBackgroundResource(R.drawable.alarm_background_normal);
-                layout.setElevation(0);
+                if(Utils.isLP())
+                    layout.setElevation(0);
             }
         }
 

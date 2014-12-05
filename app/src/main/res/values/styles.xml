@@ -244,7 +244,7 @@
     </style>
 
     <style name="button">
-        <item name="android:background">@style/BorderlessButton</item>
+        <item name="android:background">?selectableItemBackground</item>
         <item name="android:textSize">@dimen/button_font_size</item>
     </style>
 
@@ -261,7 +261,7 @@
     <style name="dialpad">
         <item name="android:textSize">@dimen/dialpad_font_size</item>
         <item name="android:fontFamily">sans-serif-thin</item>
-        <item name="android:background">@style/BorderlessButton</item>
+        <item name="android:background">?selectableItemBackground</item>
     </style>
 
     <style name="PrimaryLabelTextAppearance">
