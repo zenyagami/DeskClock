@@ -25,7 +25,6 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.app.LoaderManager;
-import android.app.TimePickerDialog.OnTimeSetListener;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
@@ -73,6 +72,8 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import com.android.datetimepicker.time.RadialPickerLayout;
+import com.android.datetimepicker.time.TimePickerDialog;
 import com.android.deskclock.alarms.AlarmStateManager;
 import com.android.deskclock.provider.Alarm;
 import com.android.deskclock.provider.AlarmInstance;
@@ -88,7 +89,7 @@ import java.util.HashSet;
  * AlarmClock application.
  */
 public class AlarmClockFragment extends DeskClockFragment implements
-        LoaderManager.LoaderCallbacks<Cursor>, OnTimeSetListener, View.OnTouchListener {
+        LoaderManager.LoaderCallbacks<Cursor>, TimePickerDialog.OnTimeSetListener, View.OnTouchListener {
     private static final float EXPAND_DECELERATION = 1f;
     private static final float COLLAPSE_DECELERATION = 0.7f;
 
@@ -370,7 +371,7 @@ public class AlarmClockFragment extends DeskClockFragment implements
     }
 
     // Callback used by TimePickerDialog
-    @Override
+    /*@Override
     public void onTimeSet(TimePicker timePicker, int hourOfDay, int minute) {
         if (mSelectedAlarm == null) {
             // If mSelectedAlarm is null then we're creating a new alarm.
@@ -393,7 +394,7 @@ public class AlarmClockFragment extends DeskClockFragment implements
             asyncUpdateAlarm(mSelectedAlarm, true);
             mSelectedAlarm = null;
         }
-    }
+    }*/
 
     private void showLabelDialog(final Alarm alarm) {
         final FragmentTransaction ft = getFragmentManager().beginTransaction();
@@ -497,6 +498,31 @@ public class AlarmClockFragment extends DeskClockFragment implements
                 default:
                     LogUtils.w("Unhandled request code in onActivityResult: " + requestCode);
             }
+        }
+    }
+
+    @Override
+    public void onTimeSet(RadialPickerLayout view, int hourOfDay, int minute) {
+        if (mSelectedAlarm == null) {
+            // If mSelectedAlarm is null then we're creating a new alarm.
+            Alarm a = new Alarm();
+            a.alert = RingtoneManager.getActualDefaultRingtoneUri(getActivity(),
+                    RingtoneManager.TYPE_ALARM);
+            if (a.alert == null) {
+                a.alert = Uri.parse("content://settings/system/alarm_alert");
+            }
+            a.hour = hourOfDay;
+            a.minutes = minute;
+            a.enabled = true;
+            mAddedAlarm = a;
+            asyncAddAlarm(a);
+        } else {
+            mSelectedAlarm.hour = hourOfDay;
+            mSelectedAlarm.minutes = minute;
+            mSelectedAlarm.enabled = true;
+            mScrollToAlarmId = mSelectedAlarm.id;
+            asyncUpdateAlarm(mSelectedAlarm, true);
+            mSelectedAlarm = null;
         }
     }
 

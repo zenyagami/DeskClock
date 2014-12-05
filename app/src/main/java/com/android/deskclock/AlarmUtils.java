@@ -64,11 +64,26 @@ public class AlarmUtils {
             ft.remove(prev);
         }
         ft.commit();
-        final TimePickerFragment timePickerFragment = new TimePickerFragment();
+
+        final int hour, minute;
+        if (alarm == null) {
+            final Calendar c = Calendar.getInstance();
+            hour = c.get(Calendar.HOUR_OF_DAY);
+            minute = c.get(Calendar.MINUTE);
+        } else {
+            hour = alarm.hour;
+            minute = alarm.minutes;
+        }
+        final com.android.datetimepicker.time.TimePickerDialog pickerFragment= com.android.datetimepicker.time.TimePickerDialog.newInstance(((com.android.datetimepicker.time.TimePickerDialog.OnTimeSetListener) fragment)
+                ,hour,minute,DateFormat.is24HourFormat(fragment.getActivity()));
+        pickerFragment.setThemeDark(true);
+        pickerFragment.show(manager,FRAG_TAG_TIME_PICKER);
+
+        /*final TimePickerFragment timePickerFragment = new TimePickerFragment();
         timePickerFragment.setTargetFragment(fragment, 0);
         timePickerFragment.setOnTimeSetListener((TimePickerDialog.OnTimeSetListener) fragment);
         timePickerFragment.setAlarm(alarm);
-        timePickerFragment.show(manager, FRAG_TAG_TIME_PICKER);
+        timePickerFragment.show(manager, FRAG_TAG_TIME_PICKER);*/
     }
 
     /**

@@ -25,6 +25,6 @@ dependencies {
     compile 'com.android.support:palette-v7:21.0.+'
     compile 'com.android.support:appcompat-v7:21.0.+'
     compile 'com.github.markushi:android-ui:1.2'
-
+    compile project(':DateTime')
 }
 
