@@ -17,6 +17,7 @@
 package com.zenkun.deskclock;
 
 import android.app.ActionBar;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -44,6 +45,10 @@ public class SettingsActivity extends ActionBarActivity{
     @Override
     protected void onResume() {
         super.onResume();
+        if(getSupportActionBar()!=null)
+        {
+           // getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Utils.getCurrentHourColor()));
+        }
         getWindow().getDecorView().setBackgroundColor(Utils.getCurrentHourColor());
     }
 

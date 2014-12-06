@@ -194,6 +194,7 @@ public class DeskClock extends ActionBarActivity implements LabelDialogFragment.
 
         if (mActionBar != null) {
             mActionBar.setDisplayOptions(0);
+
             mActionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
             mAlarmTab = mActionBar.newTab();

@@ -75,12 +75,9 @@ public class AlarmUtils {
             hour = alarm.hour;
             minute = alarm.minutes;
         }
-        final TimePickerFragment timePickerFragment = new TimePickerFragment();
-        timePickerFragment.setTargetFragment(fragment, 0);
-        timePickerFragment.setOnTimeSetListener(onTimeSetListener);
-        timePickerFragment.setAlarm(alarm);
-        timePickerFragment.show(manager, FRAG_TAG_TIME_PICKER);
-      /*  if(Utils.isLP())
+
+
+      if(Utils.isLP())
         {
          final TimePickerFragment timePickerFragment = new TimePickerFragment();
         timePickerFragment.setTargetFragment(fragment, 0);
@@ -92,7 +89,7 @@ public class AlarmUtils {
                     ,hour,minute,DateFormat.is24HourFormat(fragment.getActivity()));
             pickerFragment.setThemeDark(true);
             pickerFragment.show(manager,FRAG_TAG_TIME_PICKER);
-        }*/
+        }
 
 
 

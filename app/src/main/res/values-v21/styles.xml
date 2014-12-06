@@ -20,22 +20,11 @@
         <item name="android:textColorPrimaryInverse">@color/hot_pink</item>
         <item name="android:colorAccent">@color/hot_pink</item>
     </style>
-    <style name="CitiesTheme" parent="@style/DeskClockParentTheme">
-        <item name="android:fastScrollThumbDrawable">@drawable/red_fastscroll_thumb</item>
-        <item name="android:fastScrollStyle">@style/FastScrollStyle</item>
-        <item name="android:actionBarStyle">@style/CitiesTheme.ActionBar</item>
-    </style>
     <style name="FastScrollStyle" parent="@android:style/Widget.Material.FastScroll">
         <item name="android:textColor">@color/black</item>
         <item name="android:padding">24dip</item>
     </style>
-    <style name="DeskClockParentTheme" parent="Theme.AppCompat">
-        <item name="android:statusBarColor">@color/status_bar</item>
-        <item name="android:colorControlActivated">@color/white</item>
-        <item name="android:colorControlNormal">@color/white</item>
-        <item name="android:popupMenuStyle">?android:attr/actionOverflowMenuStyle</item>
-        <item name="android:buttonStyle">?android:attr/borderlessButtonStyle</item>
-    </style>
+
     <style name="dialpad">
         <item name="android:textSize">@dimen/dialpad_font_size</item>
         <item name="android:fontFamily">sans-serif-thin</item>
@@ -45,6 +34,7 @@
         <item name="android:background">?selectableItemBackground</item>
         <item name="android:textSize">@dimen/button_font_size</item>
     </style>
+
     <style name="TimerAlertFullScreenTheme" parent="Theme.AppCompat.NoActionBar">
         <item name="android:statusBarColor">@color/status_bar</item>
         <item name="android:windowNoTitle">true</item>
