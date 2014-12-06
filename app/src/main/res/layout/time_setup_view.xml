@@ -18,7 +18,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.android.deskclock.timer.TimerView
+    <com.zenkun.deskclock.timer.TimerView
         android:id="@+id/timer_time_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -41,7 +41,7 @@
             android:contentDescription="@string/timer_delete"
             android:src="@drawable/ic_backspace" />
 
-    </com.android.deskclock.timer.TimerView>
+    </com.zenkun.deskclock.timer.TimerView>
 
     <View
         android:id="@+id/divider"

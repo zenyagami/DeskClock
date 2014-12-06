@@ -22,7 +22,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <com.android.deskclock.AnalogClock
+        <com.zenkun.deskclock.AnalogClock
             android:id="@+id/analog_clock"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

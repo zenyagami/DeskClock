@@ -45,7 +45,7 @@
                 android:layout_gravity="center"
                 android:gravity="center" />
 
-            <com.android.deskclock.AnalogClock
+            <com.zenkun.deskclock.AnalogClock
                 android:id="@+id/analog_clock"
                 android:layout_width="@dimen/world_clock_analog_size"
                 android:layout_height="@dimen/world_clock_analog_size"
@@ -58,7 +58,7 @@
 
         </FrameLayout>
 
-        <com.android.deskclock.widget.EllipsizeLayout
+        <com.zenkun.deskclock.widget.EllipsizeLayout
             android:id="@+id/city_name_layout"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
@@ -68,7 +68,7 @@
 
             <include layout="@layout/world_clock_label"/>
 
-        </com.android.deskclock.widget.EllipsizeLayout>
+        </com.zenkun.deskclock.widget.EllipsizeLayout>
 
     </LinearLayout>
 

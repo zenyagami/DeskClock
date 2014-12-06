@@ -33,7 +33,7 @@
         android:layout_marginTop="@dimen/alarm_clock_vertical_margin"
         android:orientation="horizontal">
 
-        <com.android.deskclock.widget.TextTime
+        <com.zenkun.deskclock.widget.TextTime
             android:id="@+id/digital_clock"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -183,7 +183,7 @@
                 android:layout_marginStart="8dp"
                 android:background="@color/hairline" />
 
-            <com.android.deskclock.widget.EllipsizeLayout
+            <com.zenkun.deskclock.widget.EllipsizeLayout
                 android:id="@+id/summary"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -220,7 +220,7 @@
                     android:textStyle="bold"
                     android:textColor="@color/clock_white" />
 
-            </com.android.deskclock.widget.EllipsizeLayout>
+            </com.zenkun.deskclock.widget.EllipsizeLayout>
 
             <ImageView
                 android:id="@+id/arrow"

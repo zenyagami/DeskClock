@@ -48,7 +48,7 @@
 
         </FrameLayout>
 
-        <com.android.deskclock.widget.FabButton
+        <com.zenkun.deskclock.widget.FabButton
             xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_width="0dp"
             android:layout_weight="1"

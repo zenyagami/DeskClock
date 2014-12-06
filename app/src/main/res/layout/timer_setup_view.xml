@@ -14,7 +14,7 @@
      limitations under the License.
 -->
 
-<com.android.deskclock.TimerSetupView
+<com.zenkun.deskclock.TimerSetupView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/timer_setup"
     android:layout_width="match_parent"

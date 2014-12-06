@@ -27,7 +27,7 @@
             android:layout_width="0dip"
             android:layout_height="match_parent"/>
 
-    <com.android.deskclock.CircleButtonsLayout
+    <com.zenkun.deskclock.CircleButtonsLayout
         android:id="@+id/stopwatch_circle"
         android:layout_width="@dimen/circle_size"
         android:layout_height="@dimen/circle_size"
@@ -36,18 +36,18 @@
         android:layout_marginBottom="32dip"
         android:layout_marginRight="32dip">
 
-        <com.android.deskclock.timer.CountingTimerView
+        <com.zenkun.deskclock.timer.CountingTimerView
             android:id="@+id/stopwatch_time_text"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-        <com.android.deskclock.CircleTimerView
+        <com.zenkun.deskclock.CircleTimerView
             android:id="@+id/stopwatch_time"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@null" />
 
-    </com.android.deskclock.CircleButtonsLayout>
+    </com.zenkun.deskclock.CircleButtonsLayout>
 
     <ListView
         android:id="@+id/laps_list"

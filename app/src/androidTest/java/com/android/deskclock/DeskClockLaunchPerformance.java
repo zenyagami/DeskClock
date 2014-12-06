@@ -29,7 +29,7 @@ public class DeskClockLaunchPerformance extends LaunchPerformanceBase {
     public void onCreate(Bundle arguments) {
         super.onCreate(arguments);
 
-        mIntent.setClassName(getTargetContext(), "com.android.deskclock.DeskClock");
+        mIntent.setClassName(getTargetContext(), "DeskClock");
         start();
     }
 

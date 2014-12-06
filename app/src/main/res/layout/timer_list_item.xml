@@ -15,7 +15,7 @@
 -->
 
 <!-- timer item in the list of active timers -->
-<com.android.deskclock.timer.TimerListItem
+<com.zenkun.deskclock.timer.TimerListItem
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -24,7 +24,7 @@
     android:paddingBottom="@dimen/timer_list_padding_bottom"
     android:orientation="vertical">
 
-    <com.android.deskclock.CircleButtonsLayout
+    <com.zenkun.deskclock.CircleButtonsLayout
         android:id="@+id/timer_circle"
         android:layout_width="@dimen/circle_size"
         android:layout_height="@dimen/circle_size"
@@ -32,12 +32,12 @@
         android:layout_marginEnd="@dimen/timer_circle_margin"
         android:layout_marginStart="@dimen/timer_circle_margin">
 
-        <com.android.deskclock.CircleTimerView
+        <com.zenkun.deskclock.CircleTimerView
             android:id="@+id/timer_time"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 
-        <com.android.deskclock.timer.CountingTimerView
+        <com.zenkun.deskclock.timer.CountingTimerView
             android:id="@+id/timer_time_text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
@@ -85,6 +85,6 @@
             android:gravity="center"
             android:src="@drawable/ic_plusone"/>
 
-    </com.android.deskclock.CircleButtonsLayout>
+    </com.zenkun.deskclock.CircleButtonsLayout>
 
-</com.android.deskclock.timer.TimerListItem>
+</com.zenkun.deskclock.timer.TimerListItem>

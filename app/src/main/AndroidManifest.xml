@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.android.deskclock"
+    package="com.zenkun.deskclock"
     android:versionCode="1"
     android:versionName="1">
 
@@ -21,11 +21,11 @@
                  android:requiredForAllUsers="true"
                  android:supportsRtl="true">
 
-        <provider android:name=".provider.ClockProvider"
+        <provider android:name="com.zenkun.deskclock.provider.ClockProvider"
                 android:authorities="com.android.deskclock"
                 android:exported="false" />
 
-        <activity android:name="DeskClock"
+        <activity android:name="com.zenkun.deskclock.DeskClock"
                 android:label="@string/app_label"
                 android:theme="@style/DeskClock"
                 android:icon="@mipmap/ic_launcher_alarmclock"
@@ -40,7 +40,7 @@
         </activity>
 
         <activity-alias android:name="DockClock"
-                android:targetActivity="DeskClock"
+                android:targetActivity="com.zenkun.deskclock.DeskClock"
                 android:label="@string/app_label"
                 android:theme="@style/DeskClock"
                 android:icon="@mipmap/ic_launcher_alarmclock"
@@ -54,7 +54,7 @@
             </intent-filter>
         </activity-alias>
 
-        <activity android:name="SettingsActivity"
+        <activity android:name="com.zenkun.deskclock.SettingsActivity"
                 android:label="@string/settings"
                 android:theme="@style/SettingsTheme"
                 android:taskAffinity=""
@@ -65,7 +65,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".worldclock.CitiesActivity"
+        <activity android:name="com.zenkun.deskclock.worldclock.CitiesActivity"
                 android:label="@string/cities_activity_title"
                 android:theme="@style/CitiesTheme"
                 android:taskAffinity=""
@@ -76,7 +76,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".alarms.AlarmActivity"
+        <activity android:name="com.zenkun.deskclock.alarms.AlarmActivity"
                 android:taskAffinity=""
                 android:excludeFromRecents="true"
                 android:theme="@style/AlarmAlertFullScreenTheme"
@@ -84,21 +84,21 @@
                 android:showOnLockScreen="true"
                 android:configChanges="orientation|screenSize|keyboardHidden|keyboard|navigation"/>
 
-        <activity android:name="ScreensaverActivity"
+        <activity android:name="com.zenkun.deskclock.ScreensaverActivity"
                 android:excludeFromRecents="true"
                 android:taskAffinity=""
                 android:theme="@style/ScreensaverActivityTheme"
                 android:configChanges="orientation|screenSize|keyboardHidden|keyboard" />
 
-        <receiver android:name=".alarms.AlarmStateManager"
+        <receiver android:name="com.zenkun.deskclock.alarms.AlarmStateManager"
                   android:exported="false">
         </receiver>
 
-        <service android:name=".alarms.AlarmService"
+        <service android:name="com.zenkun.deskclock.alarms.AlarmService"
                  android:exported="false">
         </service>
 
-        <activity android:name="HandleApiCalls"
+        <activity android:name="com.zenkun.deskclock.HandleApiCalls"
                 android:theme="@android:style/Theme.NoDisplay"
                 android:excludeFromRecents="true"
                 android:permission="com.android.alarm.permission.SET_ALARM">
@@ -117,12 +117,12 @@
         </activity>
 
         <activity-alias android:name="HandleSetAlarm"
-            android:targetActivity=".HandleApiCalls"
+            android:targetActivity="com.zenkun.deskclock.HandleApiCalls"
             android:exported="true">
         </activity-alias>
 
 
-        <receiver android:name="AlarmInitReceiver">
+        <receiver android:name="com.zenkun.deskclock.AlarmInitReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.intent.action.TIME_SET" />
@@ -131,7 +131,7 @@
             </intent-filter>
         </receiver>
 
-        <receiver android:name="com.android.alarmclock.AnalogAppWidgetProvider" android:label="@string/analog_gadget"
+        <receiver android:name="com.zenkun.alarmclock.AnalogAppWidgetProvider" android:label="@string/analog_gadget"
            android:icon="@mipmap/ic_launcher_alarmclock">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -140,7 +140,7 @@
             <meta-data android:name="android.appwidget.provider" android:resource="@xml/analog_appwidget" />
         </receiver>
 
-        <receiver android:name="com.android.alarmclock.DigitalAppWidgetProvider" android:label="@string/digital_gadget"
+        <receiver android:name="com.zenkun.alarmclock.DigitalAppWidgetProvider" android:label="@string/digital_gadget"
            android:icon="@mipmap/ic_launcher_alarmclock">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -157,15 +157,15 @@
             <meta-data android:name="android.appwidget.provider" android:resource="@xml/digital_appwidget" />
         </receiver>
 
-        <service android:name="com.android.alarmclock.DigitalAppWidgetService"
+        <service android:name="com.zenkun.alarmclock.DigitalAppWidgetService"
              android:permission="android.permission.BIND_REMOTEVIEWS"
              android:exported="false" />
 
-        <receiver android:name="com.android.alarmclock.DigitalWidgetViewsFactory"
+        <receiver android:name="com.zenkun.alarmclock.DigitalWidgetViewsFactory"
              android:exported="false" />
 
         <!-- Dream (screensaver) implementation -->
-        <service android:name="Screensaver"
+        <service android:name="com.zenkun.deskclock.Screensaver"
             android:exported="true"
             android:label="@string/app_label"
             android:permission="android.permission.BIND_DREAM_SERVICE">
@@ -180,7 +180,7 @@
         </service>
 
         <!-- Settings activity for screensaver -->
-        <activity android:name=".ScreensaverSettingsActivity"
+        <activity android:name="com.zenkun.deskclock.ScreensaverSettingsActivity"
                 android:label="@string/screensaver_settings"
                 android:theme="@style/ScreensaverSettingsActivityTheme"
                 android:taskAffinity=""
@@ -195,7 +195,7 @@
         <!-- This activity is basically like the TimerFragment in DeskClock
          but only during lock screen
          so that is only has the fired timers -->
-        <activity android:name="com.android.deskclock.timer.TimerAlertFullScreen"
+        <activity android:name="com.zenkun.deskclock.timer.TimerAlertFullScreen"
                 android:excludeFromRecents="true"
                 android:theme="@style/TimerAlertFullScreenTheme"
                 android:launchMode="singleInstance"
@@ -203,7 +203,7 @@
                 android:taskAffinity=""
                 android:configChanges="orientation|screenSize|keyboardHidden|keyboard|navigation"/>
 
-        <service android:name="TimerRingService"
+        <service android:name="com.zenkun.deskclock.TimerRingService"
                 android:exported="false"
                 android:description="@string/timer_ring_service_desc">
             <intent-filter>
@@ -211,7 +211,7 @@
             </intent-filter>
         </service>
 
-        <receiver android:name="com.android.deskclock.timer.TimerReceiver"
+        <receiver android:name="com.zenkun.deskclock.timer.TimerReceiver"
                 android:exported="false">
             <intent-filter>
                 <action android:name="start_timer" />
@@ -230,7 +230,7 @@
             </intent-filter>
         </receiver>
 
-        <service android:name="com.android.deskclock.stopwatch.StopwatchService"
+        <service android:name="com.zenkun.deskclock.stopwatch.StopwatchService"
                 android:exported="false"
                 android:description="@string/stopwatch_service_desc">
             <intent-filter>
