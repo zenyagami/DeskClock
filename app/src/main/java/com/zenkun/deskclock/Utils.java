@@ -77,6 +77,8 @@ public class Utils {
      */
     private final static String PARAM_VERSION = "version";
 
+    public final static String DEFAULT_TIME_PATTERN="h:mm a";
+
     /**
      * Cached version code to prevent repeated calls to the package manager.
      */
@@ -513,11 +515,11 @@ public class Utils {
         dateDisplay = (TextView) clock.findViewById(R.id.date);
         if (dateDisplay != null) {
             final Locale l = Locale.getDefault();
-            String fmt = DateFormat.getBestDateTimePattern(l, dateFormat);
+            String fmt = Utils.isJBMR2()? DateFormat.getBestDateTimePattern(l, dateFormat):DEFAULT_TIME_PATTERN;
             SimpleDateFormat sdf = new SimpleDateFormat(fmt, l);
             dateDisplay.setText(sdf.format(now));
             dateDisplay.setVisibility(View.VISIBLE);
-            fmt = DateFormat.getBestDateTimePattern(l, dateFormatForAccessibility);
+            fmt = Utils.isJBMR2()? DateFormat.getBestDateTimePattern(l, dateFormatForAccessibility):DEFAULT_TIME_PATTERN;
             sdf = new SimpleDateFormat(fmt, l);
             dateDisplay.setContentDescription(sdf.format(now));
         }
@@ -544,7 +546,16 @@ public class Utils {
      */
     public static CharSequence get12ModeFormat(int amPmFontSize) {
         String skeleton = "hma";
-        String pattern = DateFormat.getBestDateTimePattern(Locale.getDefault(), skeleton);
+        String pattern ;
+        if(Utils.isJBMR2())
+        {
+            pattern =DateFormat.getBestDateTimePattern(Locale.getDefault(), skeleton);
+        }else
+        {
+            //TODO find a better way...
+            pattern = DEFAULT_TIME_PATTERN;
+        }
+
         // Remove the am/pm
         if (amPmFontSize <= 0) {
             pattern.replaceAll("a", "").trim();
@@ -568,7 +579,10 @@ public class Utils {
 
     public static CharSequence get24ModeFormat() {
         String skeleton = "Hm";
-        return DateFormat.getBestDateTimePattern(Locale.getDefault(), skeleton);
+        if(Utils.isJBMR2())
+            return DateFormat.getBestDateTimePattern(Locale.getDefault(), skeleton);
+        else
+            return DEFAULT_TIME_PATTERN;
     }
 
     public static CityObj[] loadCitiesFromXml(Context c) {

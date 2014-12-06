@@ -22,7 +22,7 @@
                  android:supportsRtl="true">
 
         <provider android:name="com.zenkun.deskclock.provider.ClockProvider"
-                android:authorities="com.android.deskclock"
+                android:authorities="com.zenkun.deskclock"
                 android:exported="false" />
 
         <activity android:name="com.zenkun.deskclock.DeskClock"

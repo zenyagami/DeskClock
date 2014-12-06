@@ -274,12 +274,12 @@ public class CitiesActivity extends ActionBarActivity implements OnCheckedChange
                 }
             }
 
-            mPattern24 = DateFormat.getBestDateTimePattern(Locale.getDefault(), "Hm");
+            mPattern24 = Utils.isJBMR2()? DateFormat.getBestDateTimePattern(Locale.getDefault(), "Hm"):"HH:mm";
 
             // There's an RTL layout bug that causes jank when fast-scrolling through
             // the list in 12-hour mode in an RTL locale. We can work around this by
             // ensuring the strings are the same length by using "hh" instead of "h".
-            String pattern12 = DateFormat.getBestDateTimePattern(Locale.getDefault(), "hma");
+            String pattern12 = Utils.isJBMR2()? DateFormat.getBestDateTimePattern(Locale.getDefault(), "hma"): Utils.DEFAULT_TIME_PATTERN;
             if (mLayoutDirection == View.LAYOUT_DIRECTION_RTL) {
                 pattern12 = pattern12.replaceAll("h", "hh");
             }

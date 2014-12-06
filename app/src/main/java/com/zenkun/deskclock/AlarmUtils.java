@@ -38,7 +38,7 @@ public class AlarmUtils {
 
     public static String getFormattedTime(Context context, Calendar time) {
         String skeleton = DateFormat.is24HourFormat(context) ? "EHm" : "Ehma";
-        String pattern = DateFormat.getBestDateTimePattern(Locale.getDefault(), skeleton);
+        String pattern = Utils.isJBMR2()?DateFormat.getBestDateTimePattern(Locale.getDefault(), skeleton):(DateFormat.is24HourFormat(context)?"EEE HH:mm":"EEE h:mm a");
         return (String) DateFormat.format(pattern, time);
     }
 

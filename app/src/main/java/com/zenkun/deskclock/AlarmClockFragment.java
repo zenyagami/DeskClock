@@ -206,14 +206,15 @@ public class AlarmClockFragment extends DeskClockFragment implements
             mAddRemoveTransition = new android.support.transition.AutoTransition();
             ((android.support.transition.Transition) mAddRemoveTransition).setDuration(ANIMATION_DURATION);
 
-            mRepeatTransition = new AutoTransition();
+            mRepeatTransition = new android.support.transition.AutoTransition();
             ((android.support.transition.Transition)mRepeatTransition).setDuration(ANIMATION_DURATION / 2);
             ((android.support.transition.Transition)mRepeatTransition).setInterpolator(new AccelerateDecelerateInterpolator());
 
-            mEmptyViewTransition = new TransitionSet()
+
+            mEmptyViewTransition = new android.support.transition.TransitionSet()
                     .setOrdering(TransitionSet.ORDERING_SEQUENTIAL)
-                    .addTransition(new Fade(Fade.OUT))
-                    .addTransition(new Fade(Fade.IN))
+                    .addTransition(new  android.support.transition.Fade(Fade.OUT))
+                    .addTransition(new android.support.transition.Fade(Fade.IN))
                     .setDuration(ANIMATION_DURATION);
 
         }

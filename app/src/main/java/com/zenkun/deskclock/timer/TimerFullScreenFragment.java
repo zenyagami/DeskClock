@@ -532,13 +532,21 @@ public class TimerFullScreenFragment extends DeskClockFragment
         mFab.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                revealAnimation(mFab, getActivity().getResources().getColor(R.color.clock_white));
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        updateAllTimesUpTimers(false /* stop */);
-                    }
-                }, TimerFragment.ANIMATION_TIME_MILLIS);
+                if(Utils.isJBMR2())
+                {
+                    revealAnimation(mFab, getActivity().getResources().getColor(R.color.clock_white));
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            updateAllTimesUpTimers(false /* stop */);
+                        }
+                    }, TimerFragment.ANIMATION_TIME_MILLIS);
+                }else
+                {
+                    //TODO generar revealView
+                    updateAllTimesUpTimers(false /* stop */);
+                }
+
             }
         });
     }

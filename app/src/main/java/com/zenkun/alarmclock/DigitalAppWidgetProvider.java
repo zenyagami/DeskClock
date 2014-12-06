@@ -171,8 +171,8 @@ public class DigitalAppWidgetProvider extends AppWidgetProvider {
         WidgetUtils.setClockSize(context, widget, ratio);
 
         // Set today's date format
-        CharSequence dateFormat = DateFormat.getBestDateTimePattern(Locale.getDefault(),
-                context.getString(R.string.abbrev_wday_month_day_no_year));
+        CharSequence dateFormat = Utils.isJBMR2()?DateFormat.getBestDateTimePattern(Locale.getDefault(),
+                context.getString(R.string.abbrev_wday_month_day_no_year)):"EEE, MMMM d";
         widget.setCharSequence(R.id.date, "setFormat12Hour", dateFormat);
         widget.setCharSequence(R.id.date, "setFormat24Hour", dateFormat);
 

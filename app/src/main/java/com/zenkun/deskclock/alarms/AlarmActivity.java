@@ -351,8 +351,12 @@ public class AlarmActivity extends ActionBarActivity implements View.OnClickList
 
         final int alertColor = getResources().getColor(R.color.hot_pink);
         setAnimatedFractions(1.0f /* snoozeFraction */, 0.0f /* dismissFraction */);
-        getAlertAnimator(mSnoozeButton, R.string.alarm_alert_snoozed_text,
-                AlarmStateManager.getSnoozedMinutes(this), alertColor, alertColor).start();
+        Animator animator =getAlertAnimator(mSnoozeButton, R.string.alarm_alert_snoozed_text,
+                AlarmStateManager.getSnoozedMinutes(this), alertColor, alertColor);
+        if(animator!=null)
+        {
+            animator.start();
+        }
         AlarmStateManager.setSnoozeState(this, mAlarmInstance, false /* showToast */);
     }
 
@@ -361,8 +365,12 @@ public class AlarmActivity extends ActionBarActivity implements View.OnClickList
         LogUtils.v(LOGTAG, "Dismissed: %s", mAlarmInstance);
 
         setAnimatedFractions(0.0f /* snoozeFraction */, 1.0f /* dismissFraction */);
-        getAlertAnimator(mDismissButton, R.string.alarm_alert_off_text, null /* infoText */,
-                Color.WHITE, mCurrentHourColor).start();
+       Animator animator= getAlertAnimator(mDismissButton, R.string.alarm_alert_off_text, null /* infoText */,
+                Color.WHITE, mCurrentHourColor);
+        if(animator!=null)
+        {
+            animator.start();
+        }
         AlarmStateManager.setDismissState(this, mAlarmInstance);
     }
 
@@ -408,6 +416,25 @@ public class AlarmActivity extends ActionBarActivity implements View.OnClickList
 
     private Animator getAlertAnimator(final View source, final int titleResId,
             final String infoText, final int revealColor, final int backgroundColor) {
+        if(!Utils.isJBMR2())
+        {
+            mAlertView.setVisibility(View.VISIBLE);
+            mAlertTitleView.setText(titleResId);
+            if (infoText != null) {
+                mAlertInfoView.setText(infoText);
+                mAlertInfoView.setVisibility(View.VISIBLE);
+            }
+            mContentView.setVisibility(View.GONE);
+            mContainerView.setBackgroundColor(backgroundColor);
+            mHandler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    finish();
+                }
+            }, ALERT_DISMISS_DELAY_MILLIS);
+            return null;
+        }
+
         final ViewGroupOverlay overlay = mContainerView.getOverlay();
 
         // Create a transient view for performing the reveal animation.
