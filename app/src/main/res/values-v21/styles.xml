@@ -14,6 +14,12 @@
         <item name="android:numbersTextColor">@color/white</item>
         <item name="android:amPmTextColor">@color/white</item>
     </style>
+    <style name="TimePickerTheme" parent="@android:style/Theme.Material.Dialog">
+        <item name="android:background">@color/time_picker_gray</item>
+        <item name="android:timePickerStyle">@style/TimePickerStyle</item>
+        <item name="android:textColorPrimaryInverse">@color/hot_pink</item>
+        <item name="android:colorAccent">@color/hot_pink</item>
+    </style>
     <style name="CitiesTheme" parent="@style/DeskClockParentTheme">
         <item name="android:fastScrollThumbDrawable">@drawable/red_fastscroll_thumb</item>
         <item name="android:fastScrollStyle">@style/FastScrollStyle</item>
@@ -39,10 +45,18 @@
         <item name="android:background">?selectableItemBackground</item>
         <item name="android:textSize">@dimen/button_font_size</item>
     </style>
-    <style name="TimerAlertFullScreenTheme" parent="@android:style/Theme.Material.Wallpaper.NoTitleBar">
+    <style name="TimerAlertFullScreenTheme" parent="Theme.AppCompat.NoActionBar">
         <item name="android:statusBarColor">@color/status_bar</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowShowWallpaper">true</item>
     </style>
-    <style name="AlarmAlertFullScreenTheme" parent="@android:style/Theme.Material.Wallpaper.NoTitleBar">
+    <style name="AlarmAlertFullScreenTheme" parent="Theme.AppCompat.NoActionBar">
         <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowShowWallpaper">true</item>
     </style>
 </resources>

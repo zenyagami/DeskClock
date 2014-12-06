@@ -19,6 +19,7 @@ package com.zenkun.deskclock;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.app.TimePickerDialog;
 import android.content.Context;
 import android.text.format.DateFormat;
 import android.widget.Toast;
@@ -56,7 +57,7 @@ public class AlarmUtils {
      *                 is recreated.
      * @param alarm The clicked alarm, it can be null if user was clicking the fab instead.
      */
-    public static void showTimeEditDialog(Fragment fragment, final Alarm alarm) {
+    public static void showTimeEditDialog(Fragment fragment, final Alarm alarm,TimePickerDialog.OnTimeSetListener onTimeSetListener) {
         final FragmentManager manager = fragment.getFragmentManager();
         final FragmentTransaction ft = manager.beginTransaction();
         final Fragment prev = manager.findFragmentByTag(FRAG_TAG_TIME_PICKER);
@@ -74,16 +75,27 @@ public class AlarmUtils {
             hour = alarm.hour;
             minute = alarm.minutes;
         }
-        final com.android.datetimepicker.time.TimePickerDialog pickerFragment= com.android.datetimepicker.time.TimePickerDialog.newInstance(((com.android.datetimepicker.time.TimePickerDialog.OnTimeSetListener) fragment)
-                ,hour,minute,DateFormat.is24HourFormat(fragment.getActivity()));
-        pickerFragment.setThemeDark(true);
-        pickerFragment.show(manager,FRAG_TAG_TIME_PICKER);
-
-        /*final TimePickerFragment timePickerFragment = new TimePickerFragment();
+        final TimePickerFragment timePickerFragment = new TimePickerFragment();
         timePickerFragment.setTargetFragment(fragment, 0);
-        timePickerFragment.setOnTimeSetListener((TimePickerDialog.OnTimeSetListener) fragment);
+        timePickerFragment.setOnTimeSetListener(onTimeSetListener);
         timePickerFragment.setAlarm(alarm);
-        timePickerFragment.show(manager, FRAG_TAG_TIME_PICKER);*/
+        timePickerFragment.show(manager, FRAG_TAG_TIME_PICKER);
+      /*  if(Utils.isLP())
+        {
+         final TimePickerFragment timePickerFragment = new TimePickerFragment();
+        timePickerFragment.setTargetFragment(fragment, 0);
+        timePickerFragment.setOnTimeSetListener(onTimeSetListener);
+        timePickerFragment.setAlarm(alarm);
+        timePickerFragment.show(manager, FRAG_TAG_TIME_PICKER);
+        }else {
+            final com.android.datetimepicker.time.TimePickerDialog pickerFragment= com.android.datetimepicker.time.TimePickerDialog.newInstance(((com.android.datetimepicker.time.TimePickerDialog.OnTimeSetListener) fragment)
+                    ,hour,minute,DateFormat.is24HourFormat(fragment.getActivity()));
+            pickerFragment.setThemeDark(true);
+            pickerFragment.show(manager,FRAG_TAG_TIME_PICKER);
+        }*/
+
+
+
     }
 
     /**

@@ -67,6 +67,7 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.android.datetimepicker.time.RadialPickerLayout;
@@ -147,6 +148,12 @@ public class AlarmClockFragment extends DeskClockFragment implements
     private Object mAddRemoveTransition;
     private Object mRepeatTransition;
     private Object mEmptyViewTransition;
+    private android.app.TimePickerDialog.OnTimeSetListener timerPickerDialog =new android.app.TimePickerDialog.OnTimeSetListener() {
+        @Override
+        public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+            setupNewAlarm(hourOfDay,minute);
+        }
+    };
 
 
     //support
@@ -526,8 +533,8 @@ public class AlarmClockFragment extends DeskClockFragment implements
         }
     }
 
-    @Override
-    public void onTimeSet(RadialPickerLayout view, int hourOfDay, int minute) {
+    private void setupNewAlarm(int hourOfDay, int minute)
+    {
         if (mSelectedAlarm == null) {
             // If mSelectedAlarm is null then we're creating a new alarm.
             Alarm a = new Alarm();
@@ -549,6 +556,10 @@ public class AlarmClockFragment extends DeskClockFragment implements
             asyncUpdateAlarm(mSelectedAlarm, true);
             mSelectedAlarm = null;
         }
+    }
+    @Override
+    public void onTimeSet(RadialPickerLayout view, int hourOfDay, int minute) {
+        setupNewAlarm(hourOfDay,minute);
     }
 
     public class AlarmItemAdapter extends CursorAdapter {
@@ -777,7 +788,16 @@ public class AlarmClockFragment extends DeskClockFragment implements
                 @Override
                 public void onClick(View view) {
                     mSelectedAlarm = itemHolder.alarm;
-                    AlarmUtils.showTimeEditDialog(AlarmClockFragment.this, alarm);
+                    if(Utils.isLP())
+                    {
+                        AlarmUtils.showTimeEditDialog(AlarmClockFragment.this,alarm,timerPickerDialog );
+
+                    }else
+                    {
+                        AlarmUtils.showTimeEditDialog(AlarmClockFragment.this, alarm,null);
+
+                    }
+
                     expandAlarm(itemHolder, true);
                     itemHolder.alarmItem.post(mScrollRunnable);
                 }
@@ -1420,7 +1440,15 @@ public class AlarmClockFragment extends DeskClockFragment implements
         // Set the "selected" alarm as null, and we'll create the new one when the timepicker
         // comes back.
         mSelectedAlarm = null;
-        AlarmUtils.showTimeEditDialog(this, null);
+        //en lollipop mostramos dialogo nativo
+        if(Utils.isLP())
+        {
+            AlarmUtils.showTimeEditDialog(this, null,timerPickerDialog);
+        }else
+        {
+            AlarmUtils.showTimeEditDialog(this, null,null);
+        }
+
     }
 
     private static AlarmInstance setupAlarmInstance(Context context, Alarm alarm) {
