@@ -20,60 +20,77 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/desk_clock_pager"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:orientation="horizontal">
+        <android.support.v4.view.ViewPager
+            android:id="@+id/desk_clock_pager"
+            android:layout_width="match_parent"
+            android:layout_above="@+id/adView"
+            android:layout_height="match_parent"/>
 
-        <FrameLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="start|center_vertical"
-            android:layout_weight="1">
+        <LinearLayout
+            android:layout_above="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-            <ImageButton
-                android:id="@+id/left_button"
-                android:layout_width="wrap_content"
+            <FrameLayout
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal"
-                style="@style/BorderlessButton"
-                android:scaleType="center"
-                android:contentDescription="@null" />
+                android:layout_gravity="start|center_vertical"
+                android:layout_weight="1">
 
-        </FrameLayout>
+                <ImageButton
+                    android:id="@+id/left_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    style="@style/BorderlessButton"
+                    android:scaleType="center"
+                    android:contentDescription="@null" />
 
-        <com.zenkun.deskclock.widget.FabButton
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            app:fabBackground="@drawable/floating_action_button"
-            android:id="@+id/fab"
-            android:layout_height="wrap_content"/>
+            </FrameLayout>
+
+            <com.zenkun.deskclock.widget.FabButton
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                app:fabBackground="@drawable/floating_action_button"
+                android:id="@+id/fab"
+                android:layout_height="wrap_content"/>
 
 
-        <FrameLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="end|center_vertical"
-            android:layout_weight="1">
-
-            <ImageButton
-                android:id="@+id/right_button"
-                android:layout_width="wrap_content"
+            <FrameLayout
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal"
-                style="@style/BorderlessButton"
-                android:scaleType="center"
-                android:contentDescription="@null" />
+                android:layout_gravity="end|center_vertical"
+                android:layout_weight="1">
 
-        </FrameLayout>
+                <ImageButton
+                    android:id="@+id/right_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    style="@style/BorderlessButton"
+                    android:scaleType="center"
+                    android:contentDescription="@null" />
 
-    </LinearLayout>
+            </FrameLayout>
+
+        </LinearLayout>
+        <com.google.android.gms.ads.AdView
+            android:layout_alignParentBottom="true"
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            ads:adSize="SMART_BANNER"
+            ads:adUnitId="ca-app-pub-6063219447844800/4182326179"
+            android:gravity="bottom"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
 
 </FrameLayout>

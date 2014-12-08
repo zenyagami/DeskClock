@@ -78,6 +78,7 @@ public class Utils {
     private final static String PARAM_VERSION = "version";
 
     public final static String DEFAULT_TIME_PATTERN="h:mm a";
+    public static final String ADS_TEST_DEVICE ="415C89F7DD625D3A0538C913AE46C605" ;
 
     /**
      * Cached version code to prevent repeated calls to the package manager.

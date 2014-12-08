@@ -239,6 +239,7 @@ public class DeskClock extends ActionBarActivity implements LabelDialogFragment.
             }
         }
 
+
         // Timer receiver may ask the app to go to the timer fragment if a timer expired
         Intent i = getIntent();
         if (i != null) {

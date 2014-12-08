@@ -16,10 +16,13 @@
     <uses-permission android:name="android.permission.DEVICE_POWER" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
-    <application android:label="@string/app_label"
+    <application android:label="@string/app_label_app"
                  android:icon="@mipmap/ic_launcher_alarmclock"
                  android:requiredForAllUsers="true"
                  android:supportsRtl="true">
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
 
         <provider android:name="com.zenkun.deskclock.provider.ClockProvider"
                 android:authorities="com.zenkun.deskclock"
