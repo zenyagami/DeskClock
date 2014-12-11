@@ -26,6 +26,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.location.Location;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
@@ -43,10 +45,20 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnTouchListener;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
+import com.anjlab.android.iab.v3.BillingProcessor;
+import com.anjlab.android.iab.v3.TransactionDetails;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 import com.zenkun.deskclock.alarms.AlarmStateManager;
+import com.zenkun.deskclock.preferences.PreferenceApp;
 import com.zenkun.deskclock.provider.Alarm;
 import com.zenkun.deskclock.stopwatch.StopwatchFragment;
 import com.zenkun.deskclock.stopwatch.StopwatchService;
@@ -55,6 +67,8 @@ import com.zenkun.deskclock.timer.TimerFragment;
 import com.zenkun.deskclock.timer.TimerObj;
 import com.zenkun.deskclock.timer.Timers;
 import com.zenkun.deskclock.widget.FabButton;
+
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -65,7 +79,7 @@ import java.util.TimeZone;
  * DeskClock clock view for desk docks.
  */
 public class DeskClock extends ActionBarActivity implements LabelDialogFragment.TimerLabelDialogHandler,
-        LabelDialogFragment.AlarmLabelDialogHandler {
+        LabelDialogFragment.AlarmLabelDialogHandler,BillingProcessor.IBillingHandler {
     private static final boolean DEBUG = false;
     private static final String LOG_TAG = "DeskClock";
     // Alarm action for midnight (so we can update the date display).
@@ -112,6 +126,7 @@ public class DeskClock extends ActionBarActivity implements LabelDialogFragment.
     public static final int RTL_TIMER_TAB_INDEX = 1;
     public static final int RTL_STOPWATCH_TAB_INDEX = 0;
     public static final String SELECT_TAB_INTENT_EXTRA = "deskclock.select.tab";
+    private BillingProcessor bp;
 
     // TODO(rachelzhang): adding a broadcast receiver to adjust color when the timezone/time
     // changes in the background.
@@ -162,6 +177,8 @@ public class DeskClock extends ActionBarActivity implements LabelDialogFragment.
             mTabsAdapter = new TabsAdapter(this, mViewPager);
             createTabs(mSelectedTab);
         }
+        setupAds();
+
 
         mFab.setOnClickListener(new OnClickListener() {
             @Override
@@ -183,6 +200,32 @@ public class DeskClock extends ActionBarActivity implements LabelDialogFragment.
         });
 
         mActionBar.setSelectedNavigationItem(mSelectedTab);
+    }
+
+    private void setupAds() {
+        try {
+            AdView adView = (AdView) findViewById(R.id.adView);
+            //try catch por que algunas extrañas veces los ads de google causan conflicto o.O
+            if(!PreferenceApp.getPurchase(getApplicationContext()))
+            {
+                adView.setVisibility(View.VISIBLE);
+                AdRequest.Builder adRequest;
+                adRequest = new AdRequest.Builder()
+                        .addTestDevice(AdRequest.DEVICE_ID_EMULATOR);
+                if (BuildConfig.DEBUG) {
+                    adRequest.addTestDevice(Utils.ADS_TEST_DEVICE);
+                }
+                adView.loadAd(adRequest.build());
+            }else
+            {
+                adView.setVisibility(View.GONE);
+                LinearLayout fabHolder = (LinearLayout)findViewById(R.id.fabHolder);
+                RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) fabHolder.getLayoutParams();
+                layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+                fabHolder.setLayoutParams(layoutParams);
+
+            }
+        }catch (Exception ex){ex.printStackTrace();}
     }
 
     private DeskClockFragment getSelectedFragment() {
@@ -225,6 +268,8 @@ public class DeskClock extends ActionBarActivity implements LabelDialogFragment.
     @Override
     protected void onCreate(Bundle icicle) {
         super.onCreate(icicle);
+
+        bp = new BillingProcessor(this,Utils.IAP_KEY,this);
 
         mIsFirstLaunch = (icicle == null);
         getWindow().setBackgroundDrawable(null);
@@ -351,6 +396,14 @@ public class DeskClock extends ActionBarActivity implements LabelDialogFragment.
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    protected void onDestroy() {
+        if (bp != null)
+            bp.release();
+
+        super.onDestroy();
+    }
+
     private boolean processMenuClick(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.menu_item_settings:
@@ -419,6 +472,57 @@ public class DeskClock extends ActionBarActivity implements LabelDialogFragment.
             animator.start();
             mLastHourColor = currHourColor;
         }
+    }
+
+    @Override
+    public void onProductPurchased(String s, TransactionDetails transactionDetails) {
+
+    }
+
+    @Override
+    public void onPurchaseHistoryRestored() {
+
+    }
+
+    @Override
+    public void onBillingError(int i, Throwable throwable) {
+
+    }
+
+    @Override
+    public void onBillingInitialized() {
+        bp.loadOwnedPurchasesFromGoogle();
+        TransactionDetails transactionDetails= bp.getPurchaseTransactionDetails(Utils.AD_FREE_SKU);
+        if(transactionDetails!=null)
+        {
+            try {
+                JSONObject j = new JSONObject(transactionDetails.purchaseInfo.responseData);
+                onProductPurchased(j.getInt("purchaseState")==0);
+            }catch (Exception e)
+            {
+                onProductPurchased(true);
+            }
+            //onProductPurchased(true);
+            //to(transactionDetails.purchaseInfo.responseData);
+        }else
+        {
+            onProductPurchased(false);
+        }
+
+    }
+    private void onProductPurchased(boolean isPurchased) {
+        if (!isPurchased && PreferenceApp.getPurchase(getApplicationContext()) ) {
+            Toast.makeText(this, getString(R.string.err_key_corrupted),
+                    Toast.LENGTH_SHORT).show();
+            PreferenceApp.setPurchase(getApplicationContext(), false);
+
+        } else if (isPurchased && !PreferenceApp.getPurchase(getApplicationContext())) {
+            Toast.makeText(this,
+                    getString(R.string.success_purchase_ad_free),
+                    Toast.LENGTH_SHORT).show();
+            PreferenceApp.setPurchase(getApplicationContext(), true);
+        }
+
     }
 
     /**

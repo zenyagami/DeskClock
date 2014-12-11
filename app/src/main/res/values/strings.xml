@@ -857,5 +857,9 @@
 
     <!-- String for no enabled alarms in timeline view [CHAR LIMIT=30] -->
     <string name="no_upcoming_alarms">NO UPCOMING ALARMS</string>
+    <string name="err_key_corrupted">The Product Key its corrupted</string>
+    <string name="success_purchase_ad_free">Thanks for upgrading</string>
+    <string name="remove_ads_summary">Remove ads from the app</string>
+    <string name="remove_ads_title">Remove Ads</string>
 </resources>
 

@@ -17,21 +17,25 @@
 package com.zenkun.deskclock;
 
 import android.app.ActionBar;
+import android.app.Fragment;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
+import com.anjlab.android.iab.v3.BillingProcessor;
+import com.anjlab.android.iab.v3.TransactionDetails;
+import com.zenkun.deskclock.preferences.PreferenceApp;
 
 
 /**
  * Settings for the Alarm Clock.
  */
-public class SettingsActivity extends ActionBarActivity{
+public class SettingsActivity extends ActionBarActivity implements BillingProcessor.IBillingHandler, FragmentSettings.onAdsClickListener {
 
-
-
+    private BillingProcessor bp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +43,10 @@ public class SettingsActivity extends ActionBarActivity{
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_HOME_AS_UP, ActionBar.DISPLAY_HOME_AS_UP);
         }
-        getFragmentManager().beginTransaction().replace(android.R.id.content,new FragmentSettings()).commit();
+        bp = new BillingProcessor(this,Utils.IAP_KEY,this);
+        FragmentSettings fragmentSettings = new FragmentSettings();
+        fragmentSettings.setOnAdsClickListener(this);
+        getFragmentManager().beginTransaction().replace(android.R.id.content,fragmentSettings).commit();
     }
 
     @Override
@@ -76,4 +83,34 @@ public class SettingsActivity extends ActionBarActivity{
     }
 
 
+    @Override
+    public void onProductPurchased(String s, TransactionDetails transactionDetails) {
+        PreferenceApp.setPurchase(getApplicationContext(), true);
+        String toast=getString(R.string.success_purchase_ad_free) ;
+        Toast.makeText(getApplicationContext(), toast, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onPurchaseHistoryRestored() {
+
+    }
+
+    @Override
+    public void onBillingError(int i, Throwable throwable) {
+
+    }
+
+    @Override
+    public void onBillingInitialized() {
+
+    }
+
+    @Override
+    public void onRemoveAdsClick() {
+        try {
+            bp.purchase(Utils.AD_FREE_SKU);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

@@ -66,4 +66,6 @@
             android:entryValues="@array/volume_button_setting_values"
             android:defaultValue="0" />
     </PreferenceCategory>
+    <Preference android:key="remove_ads" android:summary="@string/remove_ads_summary"
+        android:title="@string/remove_ads_title"/>
 </PreferenceScreen>

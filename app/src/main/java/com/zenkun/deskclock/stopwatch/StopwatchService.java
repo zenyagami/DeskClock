@@ -180,7 +180,7 @@ public class StopwatchService extends Service {
                     PendingIntent.getService(context, 0, leftButtonIntent, 0));
             remoteViewsExpanded.
                     setTextViewCompoundDrawablesRelative(R.id.swn_left_button,
-                            R.drawable.ic_notify_lap, 0, 0, 0);
+                            Utils.isLP()?R.drawable.ic_notify_lap:R.drawable.ic_notify_lap_pre, 0, 0, 0);
 
             // Right button: stop clock
             remoteViewsExpanded.setTextViewText(
@@ -191,7 +191,7 @@ public class StopwatchService extends Service {
                     PendingIntent.getService(context, 0, rightButtonIntent, 0));
             remoteViewsExpanded.
                     setTextViewCompoundDrawablesRelative(R.id.swn_right_button,
-                            R.drawable.ic_notify_stop, 0, 0, 0);
+                           Utils.isLP()? R.drawable.ic_notify_stop:R.drawable.ic_stat_stop_pre, 0, 0, 0);
 
             // Show the laps if applicable.
             if (numLaps > 0) {
@@ -215,7 +215,7 @@ public class StopwatchService extends Service {
                     PendingIntent.getService(context, 0, leftButtonIntent, 0));
             remoteViewsExpanded.
                     setTextViewCompoundDrawablesRelative(R.id.swn_left_button,
-                            R.drawable.ic_notify_reset, 0, 0, 0);
+                           Utils.isLP()? R.drawable.ic_notify_reset: R.drawable.ic_notify_start_pre, 0, 0, 0);
 
             // Right button: start clock
             remoteViewsExpanded.setTextViewText(
@@ -226,7 +226,7 @@ public class StopwatchService extends Service {
                     PendingIntent.getService(context, 0, rightButtonIntent, 0));
             remoteViewsExpanded.
                     setTextViewCompoundDrawablesRelative(R.id.swn_right_button,
-                            R.drawable.ic_notify_start, 0, 0, 0);
+                           Utils.isLP()? R.drawable.ic_notify_start: R.drawable.ic_notify_start_pre, 0, 0, 0);
 
             // Show stopped string.
             remoteViewsCollapsed.

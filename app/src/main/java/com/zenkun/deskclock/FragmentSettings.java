@@ -23,7 +23,7 @@ import java.util.TimeZone;
 /**
  * Created by zen on 05/12/2014.
  */
-public class FragmentSettings extends PreferenceFragment implements Preference.OnPreferenceChangeListener  {
+public class FragmentSettings extends PreferenceFragment implements Preference.OnPreferenceChangeListener, Preference.OnPreferenceClickListener {
     private static final int ALARM_STREAM_TYPE_BIT =
             1 << AudioManager.STREAM_ALARM;
 
@@ -51,6 +51,27 @@ public class FragmentSettings extends PreferenceFragment implements Preference.O
 
     private static CharSequence[][] mTimezones;
     private long mTime;
+    private  onAdsClickListener onAdsClickListener;
+
+    public void setOnAdsClickListener(FragmentSettings.onAdsClickListener onAdsClickListener) {
+        this.onAdsClickListener = onAdsClickListener;
+    }
+
+    @Override
+    public boolean onPreferenceClick(Preference preference) {
+        if(preference.getKey().equals("remove_ads") && onAdsClickListener!=null)
+        {
+            onAdsClickListener.onRemoveAdsClick();
+            return true;
+        }
+        return false;
+    }
+
+    public interface onAdsClickListener
+    {
+        public void onRemoveAdsClick();
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,6 +85,7 @@ public class FragmentSettings extends PreferenceFragment implements Preference.O
             mTime = System.currentTimeMillis();
             mTimezones = getAllTimezones();
         }
+        findPreference("remove_ads").setOnPreferenceClickListener(this);
 
         listPref.setEntryValues(mTimezones[0]);
         listPref.setEntries(mTimezones[1]);

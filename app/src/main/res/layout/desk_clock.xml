@@ -31,6 +31,7 @@
             android:layout_height="match_parent"/>
 
         <LinearLayout
+            android:id="@+id/fabHolder"
             android:layout_above="@+id/adView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -87,9 +88,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             ads:adSize="SMART_BANNER"
-            ads:adUnitId="ca-app-pub-6063219447844800/4182326179"
+            ads:adUnitId="ca-app-pub-6063219447844800/1487394977"
             android:gravity="bottom"
-            android:visibility="invisible" />
+            android:visibility="visible" />
     </RelativeLayout>
 
 

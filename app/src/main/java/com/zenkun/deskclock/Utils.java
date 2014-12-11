@@ -79,6 +79,8 @@ public class Utils {
 
     public final static String DEFAULT_TIME_PATTERN="h:mm a";
     public static final String ADS_TEST_DEVICE ="415C89F7DD625D3A0538C913AE46C605" ;
+    public static final String AD_FREE_SKU = "desk_ad_free";
+    public static final String IAP_KEY = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAshknRWEODdssc+O9K2BERhlRQzEcL0tafFDTq7r/bBjBuG8fam5/4YTj3MzioCb+G53J4vUEPG5n1TDwrSwJ7uPJ/Hyywuazb7FEyb3pKxdWdvR1quV7GqIaegvJMHOWw7n1aUwlhp8La4HdUnovWtqbAjAhuETFrGPlSk9Cac6xxDfEcI2v+Bf0zyDBjb4qVKWV8qCEGTc0nC8nJpNFwivVxZAFHZ9ZeAdw16I/De1mD/n/Do3I4bIkZh4LeTGB/6rHMmJJxgIkVYdRDp6miA3nlY4DHGu4K5eysGoUGy+AZS5dXgnzPodSxm45shJf8UwyGYkZ7KpNpfA+sBsbUQIDAQAB";
 
     /**
      * Cached version code to prevent repeated calls to the package manager.
